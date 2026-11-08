@@ -1,0 +1,13 @@
+{
+  "name": "groww-ai-discovery-engine",
+  "version": "1.0.0",
+  "description": "Groww AI Discovery Engine — Voice-of-Customer NLP Churn Intelligence Platform",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {},
+  "engines": {
+    "node": ">=18"
+  }
+}

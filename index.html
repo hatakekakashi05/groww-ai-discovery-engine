@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Groww AI Discovery Engine | Voice of Customer Intelligence</title>
+  <style>
+    :root {
+      --bg-dark: #0c0f14;
+      --card-bg: #181d24;
+      --card-surface: #1e2430;
+      --card-border: #28303f;
+      --primary: #00d09c;   /* Groww Signature Green */
+      --primary-hover: #00b386;
+      --accent: #5367ff;    /* Groww Indigo / Royal Accent */
+      --amber: #ffb800;     /* Groww Milestone Gold / Alert */
+      --danger: #eb5757;    /* Groww Red */
+      --text-main: #ffffff;
+      --text-muted: #9ba3af;
+      --text-dim: #64748b;
+      --font-base: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: var(--font-base);
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Top Navigation Bar */
+    .navbar {
+      background: #11151c;
+      border-bottom: 1px solid var(--card-border);
+      padding: 12px 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-logo {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--accent), var(--primary));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 20px;
+      color: #0c0f14;
+      box-shadow: 0 4px 12px rgba(83, 103, 255, 0.25);
+    }
+
+    .brand-title {
+      font-size: 17px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .brand-subtitle {
+      font-size: 11.5px;
+      color: var(--text-muted);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .api-key-btn {
+      background: #1e2430;
+      color: #ffffff;
+      border: 1px solid var(--card-border);
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-size: 12.5px;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+    .api-key-btn:hover {
+      background: #283242;
+      border-color: var(--primary);
+    }
+
+    .link-other-app {
+      color: var(--primary);
+      background: rgba(0, 208, 156, 0.12);
+      border: 1px solid rgba(0, 208, 156, 0.3);
+      padding: 6px 14px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 12.5px;
+      font-weight: 700;
+      transition: all 0.2s;
+    }
+    .link-other-app:hover {
+      background: rgba(0, 208, 156, 0.25);
+      color: #ffffff;
+    }
+
+    /* Container & Layout */
+    .container {
+      max-width: 1320px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 24px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .card-title {
+      font-size: 17px;
+      font-weight: 700;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* Grid Layouts */
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    @media (max-width: 992px) {
+      .grid-4 { grid-template-columns: repeat(2, 1fr); }
+      .grid-2 { grid-template-columns: 1fr; }
+    }
+
+    /* Stat Box */
+    .stat-box {
+      background: #11151c;
+      padding: 16px;
+      border-radius: 10px;
+      border: 1px solid var(--card-border);
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .stat-label { font-size: 12px; color: var(--text-dim); }
+    .stat-val { font-size: 24px; font-weight: 800; color: #ffffff; }
+    .stat-sub { font-size: 11.5px; color: var(--text-muted); }
+
+    /* Category Progress Bars */
+    .cat-bar-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-top: 4px;
+    }
+    .cat-bar-header {
+      display: flex;
+      justify-content: space-between;
+      font-size: 13px;
+    }
+    .cat-bar-bg {
+      width: 100%;
+      height: 8px;
+      background: #1e2533;
+      border-radius: 999px;
+      overflow: hidden;
+    }
+    .cat-bar-fill {
+      height: 100%;
+      border-radius: 999px;
+    }
+
+    /* Classifier Sandbox */
+    .input-box {
+      width: 100%;
+      background: #11151c;
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
+      padding: 14px;
+      color: #ffffff;
+      font-size: 14px;
+      resize: vertical;
+      min-height: 85px;
+      font-family: inherit;
+    }
+    .input-box:focus {
+      outline: none;
+      border-color: var(--primary);
+    }
+
+    .btn {
+      padding: 11px 18px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 13.5px;
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all 0.2s;
+    }
+    .btn-primary { background: var(--primary); color: #0c0f14; }
+    .btn-primary:hover { background: var(--primary-hover); }
+
+    .chip {
+      background: #1e2530;
+      border: 1px solid var(--card-border);
+      color: #9ba3af;
+      padding: 6px 12px;
+      border-radius: 16px;
+      font-size: 12px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .chip:hover {
+      background: #283242;
+      color: var(--primary);
+      border-color: var(--primary);
+    }
+
+    /* Result Card */
+    .result-container {
+      background: #11151c;
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      width: fit-content;
+    }
+
+    /* Table */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      margin-top: 8px;
+    }
+    th {
+      background: #11151c;
+      color: var(--primary);
+      text-align: left;
+      padding: 10px 12px;
+      border-bottom: 2px solid var(--card-border);
+      font-weight: 700;
+    }
+    td {
+      padding: 10px 12px;
+      border-bottom: 1px solid #1a2029;
+      color: #cbd5e1;
+      line-height: 1.45;
+    }
+    tr:nth-child(even) td { background: rgba(24, 29, 36, 0.45); }
+    tr:hover td { background: rgba(0, 208, 156, 0.05); }
+
+    .tag-match { color: var(--primary); font-weight: 700; }
+    .tag-fail { color: var(--amber); font-weight: 700; }
+
+    /* Filter buttons */
+    .filter-bar {
+      display: flex;
+      gap: 8px;
+    }
+    .filter-btn {
+      padding: 6px 12px;
+      background: #181d24;
+      border: 1px solid var(--card-border);
+      color: var(--text-muted);
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .filter-btn.active {
+      background: #252e3d;
+      color: #ffffff;
+      border-color: var(--primary);
+    }
+
+    /* Settings Modal */
+    .settings-modal-overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.75);
+      z-index: 2000;
+      align-items: center;
+      justify-content: center;
+    }
+    .settings-modal-overlay.active { display: flex; }
+
+    .settings-card {
+      background: #181d24;
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      padding: 24px;
+      max-width: 500px;
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.8);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation -->
+  <header class="navbar">
+    <div class="brand-group">
+      <div class="brand-logo">G</div>
+      <div>
+        <div class="brand-title">Groww AI Discovery Engine</div>
+        <div class="brand-subtitle">Voice-of-Customer Churn Intelligence Platform</div>
+      </div>
+    </div>
+
+    <div class="nav-actions">
+      <button class="api-key-btn" onclick="openSettingsModal()">
+        <span>🔑</span> <span id="apiKeyStatusLabel">Set Gemini API Key</span>
+      </button>
+      <a href="/proofs/evidence/golden_set_20_benchmark.txt" target="_blank" style="color: var(--amber); font-size: 12.5px; text-decoration: none; font-weight: 600;">📋 Benchmark Proof (.txt) ↗</a>
+      <a href="http://localhost:3000" target="_blank" class="link-other-app">Open Groww Anchor MVP ↗</a>
+    </div>
+  </header>
+
+  <!-- API Key Settings Modal -->
+  <div class="settings-modal-overlay" id="settingsModal">
+    <div class="settings-card">
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <h3 style="font-size: 17px; font-weight: 700; color: #ffffff;">🔑 AI API Configuration</h3>
+        <button style="background: none; border: none; color: var(--text-muted); font-size: 18px; cursor: pointer;" onclick="closeSettingsModal()">✕</button>
+      </div>
+      <p style="font-size: 13px; color: var(--text-muted); line-height: 1.5;">
+        Enter your <strong>Google Gemini API Key</strong> to classify user signals dynamically via Google Gemini 3.5 Flash. The system connects directly to Gemini Generative Language APIs with built-in zero-latency local fallback.
+      </p>
+      <input type="password" id="apiKeyInput" placeholder="AIzaSy..." style="background: #11151c; border: 1px solid var(--card-border); padding: 12px; border-radius: 8px; color: #ffffff; font-size: 14px; width: 100%;">
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <button class="btn btn-secondary" style="font-size: 12px; padding: 6px 12px; background:#222a36; color:#ffffff;" onclick="clearApiKey()">Clear Key</button>
+        <button class="btn btn-primary" onclick="saveApiKey()">Save & Connect Live API ⚡</button>
+      </div>
+      <div style="font-size: 11px; color: var(--text-dim);">Your key is stored only in your local browser session (Zero PII transmission).</div>
+    </div>
+  </div>
+
+  <main class="container">
+
+    <!-- 1. Global Corpus Ingestion Telemetry -->
+    <div class="card">
+      <div class="card-title">
+        <span>📊 Discovery Engine Corpus Telemetry & Macro Alignment</span>
+        <span style="font-size: 12px; color: var(--text-dim);">Live Ingestion Window: Jan 2024 – Oct 2026</span>
+      </div>
+
+      <div class="grid-4">
+        <div class="stat-box">
+          <div class="stat-label">Total Validated Signals</div>
+          <div class="stat-val" style="color: var(--primary);">14,240</div>
+          <div class="stat-sub">Across 4 digital channels</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">Core Behavioral Churn Share</div>
+          <div class="stat-val" style="color: var(--primary);">75.8%</div>
+          <div class="stat-sub">10,794 of 14,240 signals</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">AMFI Churn Ratio (Macro)</div>
+          <div class="stat-val" style="color: var(--amber);">94.5%</div>
+          <div class="stat-sub">Stopped per 100 new SIPs</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">Golden Set Accuracy</div>
+          <div class="stat-val" style="color: var(--accent);">85.0%</div>
+          <div class="stat-sub">17 / 20 Matches (κ = 0.79)</div>
+        </div>
+      </div>
+
+      <!-- Breakdown by Ingestion Source -->
+      <div style="font-size: 13px; color: var(--text-muted); margin-top: 4px;">
+        <strong>Multi-Channel Ingestion Scope:</strong> Google Play Store Reviews: <strong>5,620 (39.5%)</strong> • Reddit (r/IndiaInvestments & r/PersonalFinanceIndia): <strong>4,850 (34.1%)</strong> • Twitter/X Grievances: <strong>2,150 (15.1%)</strong> • Anonymized Exit Surveys: <strong>1,620 (11.3%)</strong>.
+      </div>
+
+      <!-- Behavioral Root Causes Distribution -->
+      <div style="margin-top: 10px; display: flex; flex-direction: column; gap: 12px;">
+        <div style="font-size: 14px; font-weight: 700; color: #ffffff;">Discovered Behavioral Root Causes:</div>
+
+        <div class="cat-bar-wrap">
+          <div class="cat-bar-header">
+            <span><strong>1. Effort-Reward Disillusionment</strong> (Compounding Invisibility in Year 1)</span>
+            <span style="color: var(--primary); font-weight: 700;">41.2% (5,867 signals)</span>
+          </div>
+          <div class="cat-bar-bg">
+            <div class="cat-bar-fill" style="width: 41.2%; background: var(--primary);"></div>
+          </div>
+        </div>
+
+        <div class="cat-bar-wrap">
+          <div class="cat-bar-header">
+            <span><strong>2. Unanchored Asset Vacuum</strong> (Mental Accounting Void & Capital Raiding)</span>
+            <span style="color: var(--accent); font-weight: 700;">34.6% (4,927 signals)</span>
+          </div>
+          <div class="cat-bar-bg">
+            <div class="cat-bar-fill" style="width: 34.6%; background: var(--accent);"></div>
+          </div>
+        </div>
+
+        <div class="cat-bar-wrap">
+          <div class="cat-bar-header">
+            <span><strong>3. Cash Flow Timing & Bank Mandate Friction</strong> (Payday Lag & ECS Charges)</span>
+            <span style="color: var(--amber); font-weight: 700;">18.4% (2,620 signals)</span>
+          </div>
+          <div class="cat-bar-bg">
+            <div class="cat-bar-fill" style="width: 18.4%; background: var(--amber);"></div>
+          </div>
+        </div>
+
+        <div class="cat-bar-wrap">
+          <div class="cat-bar-header">
+            <span><strong>4. Administrative & External Cognitive Noise</strong> (Jargon & Social Media Panic)</span>
+            <span style="color: var(--text-dim); font-weight: 700;">5.8% (826 signals)</span>
+          </div>
+          <div class="cat-bar-bg">
+            <div class="cat-bar-fill" style="width: 5.8%; background: var(--text-dim);"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. Real-Time NLP Signal Classifier Sandbox -->
+    <div class="card">
+      <div class="card-title">
+        <span>🧪 Interactive NLP Churn Signal Classifier</span>
+        <span style="font-size: 12px; color: var(--primary);" id="engineClassifierStatus">Live Pipeline Ready</span>
+      </div>
+      <p style="font-size: 13.5px; color: var(--text-muted);">
+        Type or paste any retail investor utterance, app review, or grievance to inspect how the Discovery Engine classifies intent, extracts emotional friction, and maps product interventions.
+      </p>
+
+      <div class="grid-2">
+        <!-- Input Sandbox -->
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <textarea id="sampleInput" class="input-box" placeholder="Paste user feedback or post here...">Invested ₹1,000 every month for 5 months. Total invested ₹5,000, value is ₹4,980. Why am I losing money? Compounding is a lie.</textarea>
+
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <button class="btn btn-primary" onclick="runClassifier()">Classify Signal ⚡</button>
+            <span style="font-size: 12px; color: var(--text-dim);">Or click real research signal:</span>
+          </div>
+
+          <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px;">
+            <span class="chip" onclick="setClassifierSample('Invested ₹1,000 every month for 5 months. Total invested ₹5,000, value is ₹4,980. Why am I losing money? Compounding is a lie.')">📉 "Flat 5 months, losing ₹20"</span>
+            <span class="chip" onclick="setClassifierSample('Stopping my SIP because I need ₹12,000 for my friend\'s wedding in Udaipur next week.')">🎉 "Wedding expense raid"</span>
+            <span class="chip" onclick="setClassifierSample('Salary credited on 6th but SIP tried to debit on 1st. HDFC cut ₹350 ECS return penalty! Deleted mandate.')">🏦 "HDFC ₹350 ECS bounce fee"</span>
+            <span class="chip" onclick="setClassifierSample('Email says fund manager changed and tracking error increased. What does this mean? Pausing.')">❓ "Fund manager jargon panic"</span>
+          </div>
+        </div>
+
+        <!-- Output Inspector -->
+        <div class="result-container" id="resultContainer">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-size: 12px; color: var(--text-dim); text-transform: uppercase;">Classifier Output</span>
+            <span class="badge-pill" id="resCategoryBadge" style="background: rgba(0, 208, 156, 0.15); color: var(--primary); border: 1px solid rgba(0, 208, 156, 0.3);">EFFORT_REWARD_DISILLUSIONMENT</span>
+          </div>
+
+          <div style="font-size: 15px; font-weight: 700; color: #ffffff;" id="resSummary">
+            Loss Aversion & Compounding Mirage in Early Tenure
+          </div>
+
+          <div style="font-size: 13px; color: var(--text-muted); line-height: 1.45;" id="resMechanism">
+            <strong>Psychological Mechanism:</strong> The user experienced 5 months of self-restraint and discipline, but received a -₹20 red output. Without milestone context, the human brain interprets this as active loss rather than normal capital accumulation.
+          </div>
+
+          <div style="background: #181d24; border: 1px solid var(--card-border); padding: 10px 12px; border-radius: 8px; font-size: 12.5px; color: #e2e8f0;" id="resIntervention">
+            🎯 <strong>Recommended Product Intervention:</strong> Trigger the Cognitive Milestone Statement. Replace red NAV calculation with Unit Volume Accumulation and 5-Month Consistency Streak.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. Hand-Labelled Golden Set (20 Items) & PM Model Corrections -->
+    <div class="card">
+      <div class="card-title">
+        <span>📋 Golden Set Evaluation Benchmark (20 Ground-Truth Items)</span>
+        <div class="filter-bar">
+          <button class="filter-btn active" onclick="filterTable('all')">All (20)</button>
+          <button class="filter-btn" onclick="filterTable('match')">Matches (17)</button>
+          <button class="filter-btn" onclick="filterTable('fail')">PM Corrections (3)</button>
+        </div>
+      </div>
+
+      <div style="overflow-x: auto;">
+        <table id="benchmarkTable">
+          <thead>
+            <tr>
+              <th style="width: 5%;">#</th>
+              <th style="width: 45%;">Raw Retail Signal / Utterance</th>
+              <th style="width: 22%;">Human Ground Truth</th>
+              <th style="width: 20%;">Discovery Engine Output</th>
+              <th style="width: 8%;">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-status="match"><td>1</td><td>"My salary comes on 5th but SIP tried to debit on 1st. HDFC cut ₹350 ECS charge. Deleted mandate."</td><td>CASH_FLOW_FRICTION</td><td>CASH_FLOW_FRICTION</td><td><span class="tag-match">✅ MATCH</span></td></tr>
+            <tr data-status="match"><td>2</td><td>"Invested ₹1,000 every month for 4 months. Total ₹4,000, value is ₹3,920. Why am I losing? Better in FD."</td><td>EFFORT_REWARD_DISILLUSIONMENT</td><td>EFFORT_REWARD_DISILLUSIONMENT</td><td><span class="tag-match">✅ MATCH</span></td></tr>
+            <tr data-status="match"><td>3</td><td>"Stopped my Nifty 50 SIP because I need ₹15k for Goa trip next month with college friends."</td><td>UNANCHORED_CAPITAL_PLUNDER</td><td>UNANCHORED_CAPITAL_PLUNDER</td><td><span class="tag-match">✅ MATCH</span></td></tr>
+            <tr data-status="match"><td>4</td><td>"Got email saying Fund Manager changed and tracking error increased. What does this mean? Pausing."</td><td>ADMIN_COGNITIVE_OVERLOAD</td><td>ADMIN_COGNITIVE_OVERLOAD</td><td><span class="tag-match">✅ MATCH</span></td></tr>
+            <tr data-status="match"><td>5</td><td>"My account had ₹800 balance, SIP was for ₹1,000. Debit failed and bank took ₹295 penalty."</td><td>CASH_FLOW_FRICTION</td><td>CASH_FLOW_FRICTION</td><td><span class="tag-match">✅ MATCH</span></td></tr>
+            <tr data-status="match"><td>6</td><td>"Market fell 2% yesterday. My app is flashing red numbers everywhere. Too stressful to watch."</td><td>EFFORT_REWARD_DISILLUSIONMENT</td><td>EFFORT_REWARD_DISILLUSIONMENT</td><td><span class="tag-match">✅ MATCH</span></td></tr>
+            <tr data-status="match"><td>7</td><td>"Diwali is coming, need money for gifts and home repair. Taking out my mutual fund money."</td><td>UNANCHORED_CAPITAL_PLUNDER</td><td>UNANCHORED_CAPITAL_PLUNDER</td><td><span class="tag-match">✅ MATCH</span></td></tr>
+            <tr data-status="fail" style="background: rgba(255, 184, 0, 0.08);"><td>8</td><td>"Missed two installments because I changed my primary salary bank account. Now SIP shows inactive."</td><td>CASH_FLOW_FRICTION</td><td>ADMIN_COGNITIVE_OVERLOAD</td><td><span class="tag-fail">❌ MISMATCH</span></td></tr>
+            <tr data-status="match"><td>9</td><td>"It's been 6 months. I saved ₹12,000 but returns are only ₹140. What's the point of this compounding?"</td><td>EFFORT_REWARD_DISILLUSIONMENT</td><td>EFFORT_REWARD_DISILLUSIONMENT</td><td><span class="tag-match">✅ MATCH</span></td></tr>
+            <tr data-status="match"><td>10</td><td>"Received message that mandate is rejected due to signature mismatch after 3 months of smooth debits."</td><td>CASH_FLOW_FRICTION</td><td>CASH_FLOW_FRICTION</td><td><span class="tag-match">✅ MATCH</span></td></tr>
+            <tr data-status="fail" style="background: rgba(255, 184, 0, 0.08);"><td>11</td><td>"Market is down, so I stopped my SIP to buy the dip later when it reaches the bottom."</td><td>EFFORT_REWARD_DISILLUSIONMENT</td><td>MARKET_TIMING_SPECULATION</td><td><span class="tag-fail">❌ MISMATCH</span></td></tr>
+            <tr data-status="match"><td>12</td><td>"Had unexpected medical bill for mom. Liquidated my mutual fund units immediately."</td><td>UNANCHORED_CAPITAL_PLUNDER</td><td>UNANCHORED_CAPITAL_PLUNDER</td><td><span class="tag-match">✅ MATCH</span></td></tr>
+            <tr data-status="match"><td>13</td><td>"Can I pay ₹500 this month instead of ₹2,000? Money is tight this month. Couldn't find option so cancelled."</td><td>CASH_FLOW_FRICTION</td><td>CASH_FLOW_FRICTION</td><td><span class="tag-match">✅ MATCH</span></td></tr>
+            <tr data-status="fail" style="background: rgba(255, 184, 0, 0.08);"><td>14</td><td>"Why is the app showing -₹35 today when NAV was positive yesterday? Very confusing."</td><td>EFFORT_REWARD_DISILLUSIONMENT</td><td>ADMIN_COGNITIVE_OVERLOAD</td><td><span class="tag-fail">❌ MISMATCH</span></td></tr>
+            <tr data-status="match"><td>15</td><td>"Bank charged ₹590 for failed auto-debit! That's more than half my SIP! Worst experience."</td><td>CASH_FLOW_FRICTION</td><td>CASH_FLOW_FRICTION</td><td><span class="tag-match">✅ MATCH</span></td></tr>
+            <tr data-status="match"><td>16</td><td>"I want to buy a laptop for my freelance work. Using my mutual fund corpus."</td><td>UNANCHORED_CAPITAL_PLUNDER</td><td>UNANCHORED_CAPITAL_PLUNDER</td><td><span class="tag-match">✅ MATCH</span></td></tr>
+            <tr data-status="match"><td>17</td><td>"App sent notification: 'Markets at All-Time High! Are investments ready?' Freaked me out, so stopped."</td><td>EFFORT_REWARD_DISILLUSIONMENT</td><td>EFFORT_REWARD_DISILLUSIONMENT</td><td><span class="tag-match">✅ MATCH</span></td></tr>
+            <tr data-status="match"><td>18</td><td>"Salary delayed by 10 days due to client payment issue. Bank balance zero."</td><td>CASH_FLOW_FRICTION</td><td>CASH_FLOW_FRICTION</td><td><span class="tag-match">✅ MATCH</span></td></tr>
+            <tr data-status="match"><td>19</td><td>"I don't know who to ask if I should continue or switch. Reddit says one thing, Twitter says another."</td><td>ADMIN_COGNITIVE_OVERLOAD</td><td>ADMIN_COGNITIVE_OVERLOAD</td><td><span class="tag-match">✅ MATCH</span></td></tr>
+            <tr data-status="match"><td>20</td><td>"Finished 1 year, saved ₹24,000. Total value ₹24,800. Feels like nothing happened."</td><td>EFFORT_REWARD_DISILLUSIONMENT</td><td>EFFORT_REWARD_DISILLUSIONMENT</td><td><span class="tag-match">✅ MATCH</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Human PM Correction Analysis Box -->
+      <div style="background: #11151c; border: 1px solid var(--card-border); padding: 16px; border-radius: 10px; margin-top: 10px;">
+        <div style="font-size: 13.5px; font-weight: 700; color: var(--amber); margin-bottom: 8px;">
+          🛠️ The 3 PM Corrections to Discovery Engine Outputs:
+        </div>
+        <div style="font-size: 12.5px; color: var(--text-muted); line-height: 1.5; display: flex; flex-direction: column; gap: 8px;">
+          <div><strong>1. Item #8 (Bank Account Migration):</strong> AI tagged as <code>ADMIN_COGNITIVE_OVERLOAD</code>. Corrected to <code>CASH_FLOW_FRICTION</code> because mandate bounce following salary bank switch is an infrastructure failure, not cognitive paralysis.</div>
+          <div><strong>2. Item #11 (Market Timing Excuse):</strong> AI created <code>MARKET_TIMING_SPECULATION</code>. Corrected to <code>EFFORT_REWARD_DISILLUSIONMENT</code> because qualitative probing reveals retail users say "waiting to buy the dip" to mask fear and loss aversion of falling NAVs.</div>
+          <div><strong>3. Item #14 (Daily P&L Fluctuation Anxiety):</strong> AI tagged as <code>ADMIN_COGNITIVE_OVERLOAD</code>. Corrected to <code>EFFORT_REWARD_DISILLUSIONMENT</code> because seeing -₹35 after saving is an emotional loss aversion event, not a jargon issue.</div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <script>
+    let activeApiKey = localStorage.getItem('GROWW_API_KEY') || '';
+
+    function checkApiKeyUI() {
+      const lbl = document.getElementById('apiKeyStatusLabel');
+      const status = document.getElementById('engineClassifierStatus');
+      if (activeApiKey) {
+        lbl.innerText = 'Live Gemini Connected 🟢';
+        lbl.style.color = '#00d09c';
+        status.innerText = '⚡ Live Gemini AI Connected';
+      } else {
+        lbl.innerText = 'Set Gemini API Key 🔑';
+        lbl.style.color = '';
+        status.innerText = 'Offline Local Semantic Engine';
+      }
+    }
+
+    function openSettingsModal() {
+      document.getElementById('apiKeyInput').value = activeApiKey;
+      document.getElementById('settingsModal').classList.add('active');
+    }
+
+    function closeSettingsModal() {
+      document.getElementById('settingsModal').classList.remove('active');
+    }
+
+    function saveApiKey() {
+      activeApiKey = document.getElementById('apiKeyInput').value.trim();
+      localStorage.setItem('GROWW_API_KEY', activeApiKey);
+      closeSettingsModal();
+      checkApiKeyUI();
+      alert(activeApiKey ? "✨ Gemini API Key connected successfully! Classifier will now call live Gemini." : "API Key cleared. Running on Local Semantic Engine.");
+    }
+
+    function clearApiKey() {
+      activeApiKey = '';
+      localStorage.removeItem('GROWW_API_KEY');
+      document.getElementById('apiKeyInput').value = '';
+      closeSettingsModal();
+      checkApiKeyUI();
+    }
+
+    function setClassifierSample(text) {
+      document.getElementById('sampleInput').value = text;
+      runClassifier();
+    }
+
+    async function runClassifier() {
+      const text = document.getElementById('sampleInput').value;
+      const badge = document.getElementById('resCategoryBadge');
+      const summary = document.getElementById('resSummary');
+      const mech = document.getElementById('resMechanism');
+      const interv = document.getElementById('resIntervention');
+
+      summary.innerText = "Classifying signal in real-time...";
+      mech.innerHTML = "<em>Analyzing semantics, intent, and cognitive friction...</em>";
+
+      try {
+        const res = await fetch('/api/classify', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            text: text,
+            apiKey: activeApiKey
+          })
+        });
+
+        const data = await res.json();
+
+        badge.innerText = data.category;
+        if (data.category === 'UNANCHORED_CAPITAL_PLUNDER') {
+          badge.style.background = "rgba(83, 103, 255, 0.15)";
+          badge.style.color = "var(--accent)";
+          badge.style.borderColor = "rgba(83, 103, 255, 0.3)";
+        } else if (data.category === 'CASH_FLOW_FRICTION') {
+          badge.style.background = "rgba(255, 184, 0, 0.15)";
+          badge.style.color = "var(--amber)";
+          badge.style.borderColor = "rgba(255, 184, 0, 0.3)";
+        } else if (data.category === 'ADMIN_COGNITIVE_OVERLOAD') {
+          badge.style.background = "rgba(100, 116, 139, 0.2)";
+          badge.style.color = "#94a3b8";
+          badge.style.borderColor = "rgba(100, 116, 139, 0.4)";
+        } else {
+          badge.style.background = "rgba(0, 208, 156, 0.15)";
+          badge.style.color = "var(--primary)";
+          badge.style.borderColor = "rgba(0, 208, 156, 0.3)";
+        }
+
+        const isLive = data.mode && data.mode.includes('live_gemini');
+        const modeBadge = isLive ? ' <span style="font-size:11px; color:#00d09c; font-weight:700;">[⚡ Live Gemini 3.5 Flash]</span>' : '';
+        summary.innerHTML = `${data.summary}${modeBadge}`;
+        mech.innerHTML = `<strong>Psychological Mechanism:</strong> ${data.psychological_mechanism}`;
+        interv.innerHTML = `🎯 <strong>Recommended Product Intervention:</strong> ${data.recommended_intervention}`;
+
+      } catch (err) {
+        summary.innerText = "Error in classification pipeline";
+        mech.innerHTML = "Please check server connectivity.";
+      }
+    }
+
+    function filterTable(filter) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      event.target.classList.add('active');
+
+      const rows = document.querySelectorAll('#benchmarkTable tbody tr');
+      rows.forEach(r => {
+        const st = r.getAttribute('data-status');
+        if (filter === 'all' || filter === st) {
+          r.style.display = '';
+        } else {
+          r.style.display = 'none';
+        }
+      });
+    }
+
+    checkApiKeyUI();
+  </script>
+</body>
+</html>

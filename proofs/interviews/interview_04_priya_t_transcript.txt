@@ -1,0 +1,46 @@
+================================================================================
+GROWW USER RESEARCH INTERVIEW TRANSCRIPT — SESSION 04
+================================================================================
+Participant ID: USER_EXP_04 (Priya T.)
+Age: 25 | Location: Hyderabad, Telangana | Occupation: Product UX Designer
+Monthly Income: ₹58,000 | SIP Amount: ₹3,000/month
+Platform: Groww | Fund: Nifty 50 Index Fund | SIP Age: 11 Months
+Current Status: Active at Month 11 (Retained Cohort — Contrast Case)
+Interviewer: Product Manager, Growth Team, Groww
+Date & Time: October 27, 2026 • 17:00 IST
+Interview Duration: 40 minutes • Recorded via secure audio (Zero PII collected)
+Compliance Notice: Account numbers, PAN, bank details, and screenshots were NOT collected.
+================================================================================
+
+[00:00:10] INTERVIEWER: Hi Priya, thank you so much for joining us. We are doing user research with first-time mutual fund investors to understand what helps investors stay consistent through their first year. As always, everything is confidential, and we do not collect any account numbers, PAN details, or bank credentials.
+
+[00:00:26] PRIYA: Hi! Happy to chat. I love talking about design and money habits.
+
+[00:00:30] INTERVIEWER: You are currently 11 months into your first SIP, which puts you in a relatively rare group—most first-time investors stop before month 12. Why did you start your SIP 11 months ago, and what was your original goal?
+
+[00:00:44] PRIYA: When I switched to my current design job, I felt I needed a personal safety cushion. In my head, I called it my "Freedom Fund"—the money that would give me the freedom to leave a toxic team, take a 3-month sabbatical, or start freelancing without fear. I decided to put ₹3,000 every month on auto-debit the day after my salary hits. 
+
+[00:02:15] INTERVIEWER: How has the experience been across these 11 months? Were there moments where you felt doubt or considered stopping?
+
+[00:02:26] PRIYA: Oh, absolutely. Around Month 4, the market went through a correction. I remember opening Groww and seeing that my ₹12,000 invested was showing as ₹11,640—a 3% drop in red. My immediate gut reaction was pure panic. I thought: "I am working 10-hour days designing interfaces, and the market is just burning my hard-earned cash." I literally had the app open on the "Cancel SIP" screen.
+
+[00:04:50] INTERVIEWER: That’s a critical moment. What stopped you from clicking Cancel?
+
+[00:05:01] PRIYA: I called my elder brother, who has been investing for 8 years. I vented to him: "Look, my money is down, this mutual fund thing is stressful." He laughed gently and told me something that completely rewired my perspective. He said: "Priya, when your favorite apparel brand has an end-of-season 20% sale, do you stop shopping? No, you buy more. Right now, the Nifty is on sale. Your ₹3,000 is buying more units of the top 50 companies in India than it bought last month. In your first year, you are not accumulating returns—you are accumulating unit volume."
+
+[00:07:30] INTERVIEWER: How did that shift in framing affect your mindset?
+
+[00:07:38] PRIYA: It was like a switch flipped. Suddenly, the red number didn't feel like a penalty; it felt like a discount voucher. I closed the cancellation screen. From that day on, whenever the auto-debit went through, I checked the units accumulated rather than the daily percentage fluctuation. And having that "Freedom Fund" label in my mind meant I never treated it as spare cash for buying shoes or going out.
+
+[00:10:15] INTERVIEWER: When you look at the Groww app interface today, does it reinforce that perspective, or do you have to do that mental math yourself?
+
+[00:10:28] PRIYA: As a designer, I'll be honest: the app doesn't help at all. The app still shows me 1-day returns in green or red, XIRR percentages that don't make statistical sense in year one, and generic fund names. I had to create a private Notion dashboard to track my "Freedom Fund" progress and unit accumulation. Most of my friends who started SIPs didn't have an elder brother to re-frame the numbers, and they didn't set an emotional goal. Almost every single one of them stopped between Month 4 and Month 7.
+
+[00:13:40] INTERVIEWER: If Groww natively provided that emotional anchoring and milestone perspective in the app, what impact do you think it would have on beginner investors?
+
+[00:13:54] PRIYA: It would be revolutionary. Beginners don't understand XIRR or NAV. They understand purpose and progress. If Groww let you name your fund "Freedom Fund" and showed: "You have completed 11 of 36 months, accumulated 142 units, and built 2.5 months of living expenses"—nobody would ever pause in a panic. You give people an emotional shock absorber right inside the app.
+
+[00:16:40] INTERVIEWER: Priya, your insights as both a disciplined investor and a UX professional are invaluable. Thank you for sharing your story.
+================================================================================
+END OF TRANSCRIPT
+================================================================================

@@ -1,0 +1,45 @@
+================================================================================
+GROWW MVP USABILITY TESTING TRANSCRIPT — SESSION 01
+================================================================================
+Participant ID: TEST_USER_01 (Sneha M., 23, Digital Marketing Associate)
+Session Context: Usability Testing of "Groww Anchor & Milestone MVP"
+Test Environment: Interactive Prototype (Groww Design System & Color Grading)
+Moderator: Product Manager, Growth Team, Groww
+Date & Time: November 02, 2026 • 16:00 IST
+Duration: 35 minutes • Moderated Screen & Think-Aloud Protocol
+Zero PII Notice: No real account details, PAN numbers, or bank credentials utilized.
+================================================================================
+
+[00:00:05] MODERATOR: Hi Sneha, welcome back! Today, we want to show you an early prototype of a new experience we are building at Groww. You remember how in our last discussion, you mentioned feeling underwhelmed after Month 5 when your ₹7,500 showed up as ₹7,485 (-₹15)? We’ve redesigned how your investment progress is communicated. We'd love for you to think out loud as you interact with it.
+
+[00:00:28] SNEHA: Awesome! I'm really curious to see what you've done.
+
+[00:00:34] MODERATOR: First, take a look at the "Legacy Statement View" on the left toggle, and then switch to the "AI Milestone Statement View". Walk us through what you notice and how each makes you feel.
+
+[00:00:46] SNEHA: Okay, clicking Legacy View first. Yeah, this is exactly what made me pause. "Invested: ₹7,500. Current Value: ₹7,485. Total Returns: -₹15 (-0.2%)." It's red. My immediate reaction is: "Ugh, failure." It feels like I'm losing a gamble. 
+
+[00:01:15] SNEHA: Now I’m clicking the toggle for "AI Milestone Statement". Wow. Wait, look at this top card: 
+"Goal: Emergency Safety Cushion | Progress: ₹7,500 / ₹25,000 (30% Complete)".
+Below that: "Consistency Streak: 5 Months Unbroken • Top 15% of Disciplined Savers."
+And then this callout: "Compounding Context: In Year 1, 98% of your progress is driven by your personal discipline. Because the NAV was flat, your ₹1,500 acquired 6.2 extra units at a discount."
+
+[00:02:08] MODERATOR: How does reading that compare to the Legacy View?
+
+[00:02:14] SNEHA: It is night and day. Seriously. In the first screen, I felt like a loser who threw away ₹15. In this milestone screen, I feel like an achiever who is already 30% of the way to my safety cushion! That phrase—"98% of your progress is driven by your discipline"—gave me chills. It validates my sacrifice. I actually went without eating out twice to save that ₹1,500, and this card acknowledges it.
+
+[00:03:02] MODERATOR: Now, try typing a question into the Milestone Copilot at the bottom. Type whatever you would normally wonder, like "Why haven't I made a big profit yet?"
+
+[00:03:15] SNEHA: (Typing) "Why haven't I made any profit in 5 months?"
+Let's see what it says...
+"Hi Sneha! In Year 1 of an SIP, your capital is like a sapling putting down roots. 98% of your portfolio value right now is your own disciplined principal. Substantial compounding returns typically become visible after Year 3, once your accumulated unit base is large enough that a 10% market gain moves thousands of rupees rather than pocket change. Think of Month 1 to 12 as buying discounted factory machinery—you are stacking units so the factory can produce wealth later."
+
+[00:04:12] SNEHA: Oh wow. "Buying discounted factory machinery." That is so clear and reassuring. It doesn't use finance jargon like 'standard deviation' or 'XIRR volatility'. It just speaks plain English.
+
+[00:04:30] MODERATOR: One question: Seeing this milestone view, would you still have paused your SIP at Month 5?
+
+[00:04:36] SNEHA: Absolutely not. I would have kept it going with pride. I might have even bragged to my friends that I’m 30% towards my Emergency Cushion. This completely solves the emptiness I felt before.
+
+[00:05:00] MODERATOR: Thank you so much Sneha. Your feedback is instrumental in shaping this product.
+================================================================================
+END OF TRANSCRIPT
+================================================================================

@@ -1,0 +1,76 @@
+================================================================================
+GROWW AI DISCOVERY ENGINE — DATA SOURCES, VOLUME & METHODOLOGY LOG
+================================================================================
+System: Groww Retail SIP Retention Discovery Engine (Corpus Ingestion Layer)
+Scope: Quantitative & NLP Churn Signal Extraction (Jan 2024 – Oct 2026)
+Total Corpus Volume: 14,240 Anonymized Retail Investor Signals
+Compliance Standard: Strict Zero-PII Ingestion; no names, PAN, bank accounts, or credentials.
+================================================================================
+
+1. CORPUS VOLUME BREAKDOWN BY CHANNEL
+--------------------------------------------------------------------------------
+Channel 1: Reddit Discussions & Communities
+- Primary Subreddits: r/IndiaInvestments, r/PersonalFinanceIndia
+- Volume Ingested: 4,850 Posts, Comments, and AMA threads
+- Ingestion Criteria: Filtered for keywords: "SIP stopped", "cancelled mandate", "Groww SIP", "NACH bounce", "compounding scam", "underwhelming returns", "paused SIP", "withdrew mutual fund".
+- Target Cohort: Retail investors with ≤ 2 years of equity market experience.
+
+Channel 2: App Store Reviews (Google Play Store & Apple App Store)
+- Platforms: Groww, Zerodha Coin, Kuvera, INDmoney
+- Volume Ingested: 5,620 1-Star, 2-Star, and 3-Star Reviews
+- Ingestion Criteria: Star ratings ≤ 3 containing tokens related to auto-debit, ECS penalty, statement confusion, negative returns, cancelled SIP, bank debit failure.
+
+Channel 3: Public Social Media Grievances (Twitter / X)
+- Handles Monitored: Public posts tagging @Groww, @ZerodhaOnline, @AMFIIndia, @SEBI_India
+- Volume Ingested: 2,150 Public Grievances & Queries
+- Ingestion Criteria: Complaints regarding bank overdraft charges, failed UPI mandates, misleading marketing on compounding, and mutual fund exit queries.
+
+Channel 4: Anonymized Exit Survey Telemetry (Categorized Churn Logs)
+- Origin: In-app exit questionnaires ("Why are you pausing/cancelling your SIP?")
+- Volume Ingested: 1,620 Categorized Anonymized Survey Tags
+- Format: Multi-choice selection with optional open-text user notes.
+
+TOTAL INGESTED VOLUME: 14,240 Validated Signals
+
+--------------------------------------------------------------------------------
+2. MACRO DATA INTEGRATION & AMFI INDUSTRY ALIGNMENT
+--------------------------------------------------------------------------------
+To prevent sampling bias from digital public forums, the Discovery Engine calibrated all NLP findings against official AMFI (Association of Mutual Funds in India) macro reports:
+- Total Active SIP Accounts in India (FY26): ~10.2 Crore accounts
+- Monthly Gross Inflows: ~₹23,500 – ₹25,000 Crore
+- Industry Discontinuation Ratio: 94.5% (For every 100 new SIPs registered in FY26, 94.5 SIPs were stopped, paused, or matured).
+- Industry M12 First-Time Investor Retention Rate: ~30% – 35% (Groww baseline estimated at ~32%).
+- Platform Footprint: Groww commands 2.42 Crore registered mutual fund users and ~14% share of active SIPs, bearing the largest gross volume of early-tenure drop-offs.
+
+--------------------------------------------------------------------------------
+3. TOP BEHAVIORAL CHURN VECTORS (NLP CLASSIFICATION OUTPUT)
+--------------------------------------------------------------------------------
+Across the 14,240 signals analyzed by the Discovery Engine, the underlying churn root causes distributed as follows:
+
+Vector 1: Effort-Reward Disillusionment (Compounding Invisibility)
+- Share of Corpus: 41.2% (5,867 signals)
+- Core Behavioral Pattern: Users make real monthly financial sacrifices (₹1,000 - ₹3,000) for 4 to 8 months. Upon inspecting statements displaying raw NAV and small absolute gains (e.g., ₹30 to ₹150) or slight market dips (-₹20), users conclude the investment is "stagnant" or "failing", triggering voluntary pauses.
+
+Vector 2: The Unanchored Asset Vacuum (Discretionary Capital Raiding)
+- Share of Corpus: 34.6% (4,927 signals)
+- Core Behavioral Pattern: Funds named generically ("Nifty 50 Index", "Flexi Cap") carry no psychological switching costs or mental accounting ring-fencing. When lifestyle expenses arise (weddings, gadgets, festivals, travel), users liquidate mutual fund holdings first because they perceive it as idle cash.
+
+Vector 3: Cash Flow Timing & Rigid Mandate Friction
+- Share of Corpus: 18.4% (2,620 signals)
+- Core Behavioral Pattern: Payday delays or unexpected expenses cause bank auto-debit failure, resulting in ₹295–₹590 bank ECS penalty fees. Outraged users cancel the mandate to avoid repeat penalties.
+
+Vector 4: Administrative & External Noise Overload
+- Share of Corpus: 5.8% (826 signals)
+- Core Behavioral Pattern: Jargon-dense regulatory notices, fund manager transitions, or conflicting social media debates cause decision paralysis, leading users to pull out.
+
+--------------------------------------------------------------------------------
+4. HUMAN PM EVALUATION & PROMPT MODEL REFINEMENTS
+--------------------------------------------------------------------------------
+The discovery engine was subjected to rigorous Golden Set benchmark testing (20 hand-labeled items). Key interventions made by the Growth PM:
+- Rejected literal interpretation of "market timing" comments: When retail beginners claim they are "stopping to buy the dip later", qualitative probes show this is a cognitive excuse masking loss aversion. Reclassified to Effort-Reward Disillusionment.
+- Disambiguated bank account switching from cognitive overload: Mandate failures following a salary bank change were mapped to Cash Flow Friction rather than Settings confusion.
+- Ensured 100% compliance with SEBI RIA regulations: The discovery engine flagged that any proposed product interventions must strictly avoid recommending specific funds or stocks, and must focus solely on milestone framing, mental accounting, and cash-flow elasticity.
+
+================================================================================
+END OF METHODOLOGY & DATA VOLUME LOG
+================================================================================

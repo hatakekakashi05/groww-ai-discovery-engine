@@ -1,0 +1,42 @@
+================================================================================
+GROWW USER RESEARCH INTERVIEW TRANSCRIPT — SESSION 06
+================================================================================
+Participant ID: USER_EXP_06 (Ananya D.)
+Age: 27 | Location: New Delhi | Occupation: Senior Content Strategist
+Monthly Income: ₹65,000 | SIP Amount: ₹2,500/month
+Platform: Groww | Fund: Large & Mid Cap Mutual Fund | SIP Age: 9 Months
+Current Status: Stopped at Month 9 & Liquidated (Churned)
+Interviewer: Product Manager, Growth Team, Groww
+Date & Time: October 29, 2026 • 18:15 IST
+Interview Duration: 39 minutes • Recorded via secure audio (Zero PII collected)
+Compliance Notice: Account numbers, PAN, bank details, and screenshots were NOT collected.
+================================================================================
+
+[00:00:10] INTERVIEWER: Hi Ananya, thank you for joining us today. We are exploring the first-year experience of mutual fund investors on Groww to understand where user expectations collide with product reality. As with all our sessions, no personal identifiers, PAN, or account details are recorded.
+
+[00:00:27] ANANYA: Hi, glad to share my experience. I have a lot of thoughts on how fintech apps communicate!
+
+[00:00:32] INTERVIEWER: Wonderful! Let's start with why you initiated your SIP 9 months ago, and what you imagined the journey would feel like.
+
+[00:00:41] ANANYA: I turned 27 last year, and I wanted to be more mature about my finances. My friends were always talking about creating passive wealth. I committed ₹2,500 every month on Groww. I imagined that after 9 or 10 months, I would feel like a real investor. I expected to see a noticeable visual return, a clean milestone dashboard, and some sense of accomplishment—like how fitness apps celebrate when you run 100 kilometers or close your rings.
+
+[00:02:50] INTERVIEWER: What was the reality over those 9 months?
+
+[00:03:00] ANANYA: It felt entirely sterile. Month after month, ₹2,500 was quietly debited. After 9 months, I had contributed ₹22,500. When I opened the app, my total value was ₹22,650. In nine months of saving ₹2,500 every single month, I had gained ₹150. That’s not even a cup of coffee at Starbucks. The monthly email from Groww looked like a utility bill—a grey table with folio numbers, NAV at ₹34.18, and STT charges. There was zero delight, zero storytelling, and zero reinforcement.
+
+[00:05:40] INTERVIEWER: What led to you stopping the SIP and withdrawing the money in Month 9?
+
+[00:05:50] ANANYA: During the Diwali sales in Month 9, Apple had a deal on the iPad Air with the M2 chip. I had been wanting it for freelance copywriting and digital illustration. The price was around ₹54,000. I had ₹32,000 in my savings account. Then I remembered I had this mutual fund on Groww with ₹22,650 sitting there doing nothing. Because the fund was just called "Large & Mid Cap Fund" with no purpose or boundary, I reasoned: "Why am I letting ₹22,500 sit in a boring account that earns ₹150 in nine months, when I can buy a creative tool that will actually help my career right now?" I hit Redeem, received the money in two days, bought the iPad, and stopped the SIP.
+
+[00:08:45] INTERVIEWER: Did you feel any hesitation or regret when hitting Redeem?
+
+[00:08:52] ANANYA: Not at all. Groww made it feel like withdrawing from an ATM. The screen said "Redeem All Units? Yes/No". There was no friction, but more importantly, no reminder of why I had started in the first place. Because the money hadn't been given a sacred identity, it was just fungible cash waiting to be spent.
+
+[00:11:15] INTERVIEWER: What would have kept you investing instead of liquidating for the iPad?
+
+[00:11:28] ANANYA: Two things. First, emotional naming and visual progress. If the fund had been titled "European Solo Trip 2028" or "Future Sabbatical Fund", spending it on an iPad would have felt like stealing from my dream trip. Second, cognitive framing of compounding. Nobody ever explained to me that the first 12 months are not supposed to yield high percentage returns—they are meant to build the principal mass. If the app had told me: "Ananya, you have built ₹22,500 of your ₹1,00,000 foundation. That ₹150 is just the beginning, and you now own 650 units of India's fastest-growing companies"—I would have felt pride in ownership. I would have put the iPad on a no-cost EMI and kept my SIP intact.
+
+[00:14:30] INTERVIEWER: That phrase—'stealing from my dream'—is extraordinarily powerful. Thank you so much for your clarity and time, Ananya.
+================================================================================
+END OF TRANSCRIPT
+================================================================================

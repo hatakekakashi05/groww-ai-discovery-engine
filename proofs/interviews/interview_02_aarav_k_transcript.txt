@@ -1,0 +1,46 @@
+================================================================================
+GROWW USER RESEARCH INTERVIEW TRANSCRIPT — SESSION 02
+================================================================================
+Participant ID: USER_EXP_02 (Aarav K.)
+Age: 26 | Location: Jaipur, Rajasthan | Occupation: Operations Lead, Logistics Startup
+Monthly Income: ₹48,000 | SIP Amount: ₹1,000/month
+Platform: Groww | Fund: Large Cap Equity Fund | SIP Age: 8 Months
+Current Status: Stopped at Month 8 & Redeemed (Churned)
+Interviewer: Product Manager, Growth Team, Groww
+Date & Time: October 25, 2026 • 11:15 IST
+Interview Duration: 38 minutes • Recorded via secure audio (Zero PII collected)
+Compliance Notice: Account numbers, PAN, bank details, and screenshots were NOT collected.
+================================================================================
+
+[00:00:08] INTERVIEWER: Hi Aarav, thank you for participating in our research today. We're researching how first-time retail investors experience mutual funds in their first year. Please note that no financial account numbers, PAN details, or screenshots will be recorded.
+
+[00:00:25] AARAV: Sounds good, let's do it.
+
+[00:00:30] INTERVIEWER: Why did you start your SIP 8 months ago, and what did you expect from it back then?
+
+[00:00:38] AARAV: A colleague at work was talking about saving tax and building a corpus. He showed me Groww and said setting up an SIP is super easy. I chose ₹1,000 per month just to start somewhere. I expected that this would be my long-term nest egg—something that would quietly grow in the background so that after 5 or 10 years, I'd have a substantial sum for buying a house or emergencies.
+
+[00:02:15] INTERVIEWER: What was your experience over the 8 months you stayed invested?
+
+[00:02:22] AARAV: Honestly, it was just... completely detached. Every month, ₹1,000 would get deducted on the 3rd. Over 8 months, I saved ₹8,000. When I opened the app, the total value was around ₹8,110. It had gained maybe ₹110 in almost three-quarters of a year. The fund was named "Groww Nifty 50 Index Fund". To me, that was just a line of code on a screen. I had zero emotional connection to it. It felt like loose digital change.
+
+[00:05:00] INTERVIEWER: What happened in Month 8 that led you to stop and withdraw the money?
+
+[00:05:12] AARAV: In Month 8, my college best friend announced his destination wedding in Udaipur. Between train tickets, hotel sharing, and traditional clothes, I needed about ₹15,000 fast. I checked my checking account and I had about ₹6,000 left. Then I opened Groww. I saw ₹8,110 sitting there. Because that money was just called "Nifty 50" and wasn't earmarked for anything specific, my brain immediately thought: "Hey, this money isn't really growing anyway, and I have no immediate goal for it. Let me just take it out to pay for Udaipur." I clicked Redeem, and once the money hit my account, I cancelled the SIP so I wouldn't have the ₹1,000 deduction while my finances were tight.
+
+[00:08:45] INTERVIEWER: What did you check when you opened the app, and how often did you look at it?
+
+[00:08:55] AARAV: Maybe once a month, right after the SMS alert. I'd open it, look at the total balance, see that it moved up by ₹15 or down by ₹20, shrug my shoulders, and close the app. It looked like an online bank passbook with market noise.
+
+[00:11:10] INTERVIEWER: Did you consult anyone outside the app before redeeming?
+
+[00:11:18] AARAV: No, because it was only ₹8,000. It didn't feel like a serious financial event like breaking a fixed deposit or selling gold. In my family, you never touch Gold or PPF because they are sacred for marriage or retirement. But a mutual fund on an app? It felt as casual as spending balance from a digital wallet.
+
+[00:13:40] INTERVIEWER: That's a profound point about Gold and PPF. What would have made you keep that SIP running instead of redeeming?
+
+[00:13:52] AARAV: If from Day 1, Groww had asked me: "Aarav, what is this ₹1,000/month for?" If that fund was labeled "First Home Downpayment: ₹8,000 of ₹5 Lakhs saved", and when I clicked Withdraw, the app showed me: "Aarav, withdrawing this ₹8,000 will delay your home purchase by over a year"—I swear I would have paused. I would have told myself: "Don't touch your home fund for a 3-day wedding party." I would have borrowed from a friend or cut down on my hotel room in Udaipur instead. Because it had no purpose, it had no defense.
+
+[00:17:15] INTERVIEWER: That distinction between an unanchored fund and a purpose-driven goal is invaluable. Thank you so much, Aarav.
+================================================================================
+END OF TRANSCRIPT
+================================================================================

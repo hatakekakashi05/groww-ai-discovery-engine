@@ -1,0 +1,46 @@
+================================================================================
+GROWW USER RESEARCH INTERVIEW TRANSCRIPT — SESSION 01
+================================================================================
+Participant ID: USER_EXP_01 (Sneha M.)
+Age: 23 | Location: Bangalore, Karnataka | Occupation: Digital Marketing Associate
+Monthly Income: ₹35,000 | SIP Amount: ₹1,500/month
+Platform: Groww | Fund: Nifty 50 Index Fund | SIP Age: 5 Months
+Current Status: Paused at Month 5 (High Churn Risk)
+Interviewer: Product Manager, Growth Team, Groww
+Date & Time: October 24, 2026 • 18:30 IST
+Interview Duration: 42 minutes • Recorded via secure audio (Zero PII collected)
+Compliance Notice: Account numbers, PAN, bank details, and screenshots were NOT collected.
+================================================================================
+
+[00:00:05] INTERVIEWER: Hi Sneha, thanks for joining today. We're talking to first-time investors to understand how their experience has been over the first several months. Everything you share is completely confidential, and we will not ask for any personal financial IDs or account details.
+
+[00:00:22] SNEHA: Sure, happy to help.
+
+[00:00:26] INTERVIEWER: To start off, why did you decide to start a mutual fund SIP 5 months ago, and what were you expecting from it?
+
+[00:00:35] SNEHA: Honestly, I had just started my first job last year. All over Instagram and YouTube, you see people talking about financial freedom and the "magic of compounding" where you put in small amounts and it becomes lakhs. I thought, let me be responsible and put aside ₹1,500 every month as soon as my salary comes. I expected that every month I’d see my money steadily growing, like an FD but with much better returns. I thought it would feel exciting, like watching a plant grow.
+
+[00:02:10] INTERVIEWER: And what has the actual experience been like over these 5 months?
+
+[00:02:18] SNEHA: Underwhelming. That’s the only word I have. I have put in ₹7,500 over 5 months. That ₹1,500 isn't pocket change for me—my rent is ₹14,000, and I have to watch my spending. But when I opened the app in Month 5, my total value was ₹7,485. I literally lost ₹15! The screen just shows cold numbers: NAV, total units, and a red tag saying -0.2%. There is no celebration, no sense of progress. My brain just told me: "You made sacrifices for 5 months, and your money is doing nothing. It’s actually less than what you put in."
+
+[00:05:40] INTERVIEWER: What do you usually check when you open the app, how often do you open it, and how do you feel when you look at it?
+
+[00:05:52] SNEHA: In the beginning, I checked maybe twice a week. Every time I opened it, it would show "1-Day Return" with either -₹12 or +₹4. Over time, that started causing anxiety. When it’s green by ₹5, you feel nothing. When it’s red by ₹30, you feel regret. Eventually, I stopped checking. I only knew money was gone when HDFC sent me a debit SMS.
+
+[00:08:15] INTERVIEWER: You mentioned your SIP is currently paused. What specifically led to you pausing it?
+
+[00:08:24] SNEHA: In Month 5, I had to pay for an annual subscription and buy some clothes for a family function. I looked at my bank balance, and then I looked at Groww. Because that ₹7,500 felt completely stagnant, I thought: "Why am I sending another ₹1,500 into this black hole this month? Let me pause it and keep the cash." It was the easiest thing to pause because the app made me feel like nothing was happening anyway.
+
+[00:11:30] INTERVIEWER: When you felt unsure or disappointed, what did you do outside the app? Who did you talk to?
+
+[00:11:42] SNEHA: I didn't want to look stupid in front of colleagues, so I texted two close college friends on WhatsApp. One of them said, "Markets are sideways right now, don't waste your money, just do an RD in your bank." That validated my doubt, so I went ahead and hit pause.
+
+[00:14:05] INTERVIEWER: Looking back, what would have made you more likely to continue your SIP instead of pausing?
+
+[00:14:18] SNEHA: If the app didn't treat me like a day-trader looking at daily percentage changes. Nobody explained to me that in the first year, your money doesn't compound yet because the base is small. If Groww had shown me: "Sneha, you have accumulated ₹7,500 toward your Emergency Buffer—that's 30% of your target! And because prices were flat, your ₹1,500 bought 6.2 extra units at a discount," I would have felt proud! I would have felt like I achieved something, instead of feeling like an idiot who lost ₹15.
+
+[00:17:50] INTERVIEWER: That is incredibly clear and insightful. Thank you so much for your time and honesty, Sneha.
+================================================================================
+END OF TRANSCRIPT
+================================================================================

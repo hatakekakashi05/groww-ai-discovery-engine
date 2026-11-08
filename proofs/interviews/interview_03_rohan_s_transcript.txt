@@ -1,0 +1,42 @@
+================================================================================
+GROWW USER RESEARCH INTERVIEW TRANSCRIPT — SESSION 03
+================================================================================
+Participant ID: USER_EXP_03 (Rohan S.)
+Age: 24 | Location: Pune, Maharashtra | Occupation: Software QA Engineer
+Monthly Income: ₹42,000 | SIP Amount: ₹2,000/month
+Platform: Groww | Fund: Flexi Cap Fund | SIP Age: 6 Months
+Current Status: Stopped at Month 6 (Churned)
+Interviewer: Product Manager, Growth Team, Groww
+Date & Time: October 26, 2026 • 19:00 IST
+Interview Duration: 35 minutes • Recorded via secure audio (Zero PII collected)
+Compliance Notice: Account numbers, PAN, bank details, and screenshots were NOT collected.
+================================================================================
+
+[00:00:10] INTERVIEWER: Hi Rohan, thanks for speaking with us. Our goal today is to understand the real experience of first-time mutual fund investors during their first 12 months. No account numbers, PAN, or sensitive data will ever be collected.
+
+[00:00:24] ROHAN: Sure, happy to chat.
+
+[00:00:28] INTERVIEWER: Can you take us back to 6 months ago? Why did you start your SIP, and what were your initial expectations?
+
+[00:00:36] ROHAN: I had completed two years in my job. Everyone around me—Reddit, YouTube finance channels—kept saying that if you don't start investing in your 20s, inflation will destroy your cash. I felt a sense of duty to my future self. I set up ₹2,000 every month on auto-pay. I expected that by setting it on auto-pay, I was building serious wealth. I thought after 6 months, I'd open the app and feel that pride of seeing my money compound.
+
+[00:02:45] INTERVIEWER: What did you actually experience over those 6 months?
+
+[00:02:54] ROHAN: It felt like a silent monthly tax. Every month on the 2nd, ₹2,000 was deducted from my salary account. But there was zero positive feedback loop from Groww. Just a cold email with an attached CAS PDF that looked like an electricity bill. After 6 months, I had contributed ₹12,000. My account balance was ₹12,060. Total profit: ₹60. In Pune, ₹60 doesn't even buy two plates of poha. The entire compounding hype felt like a lie.
+
+[00:06:10] INTERVIEWER: What made you ultimately decide to stop the SIP at Month 6?
+
+[00:06:20] ROHAN: My landlord increased my flat rent by ₹2,500 starting in October. When my cash flow got tighter, I looked at all my monthly outflows: gym, broadband, Netflix, SIP. Netflix gives me shows to relax after work. Gym keeps me fit. But the SIP? It was taking ₹2,000 away and giving me ₹60 in 6 months. It felt like an unrewarding expense rather than an asset. So I opened Groww and stopped the SIP to absorb my rent increase.
+
+[00:09:40] INTERVIEWER: Did you consult anyone or look online before stopping?
+
+[00:09:50] ROHAN: I went on Reddit's r/IndiaInvestments. There were dozens of threads with conflicting arguments. Some people were saying "index funds are dead, buy momentum funds", others were saying "wait for the 2027 market correction". It was just cognitive noise. It didn't give me any clarity or reassurance, so I just closed the tab and stopped the SIP.
+
+[00:12:30] INTERVIEWER: What would have made you continue the SIP despite the rent hike?
+
+[00:12:42] ROHAN: If Groww had actually spoken to me like an intelligent human partner. Instead of just sending a debit receipt, if the app celebrated milestones—like: "Rohan, you’ve maintained a 6-month unbroken savings streak! You've successfully accumulated ₹12,000 in your Emergency Shield, putting you in the top 10% of disciplined new savers." And if they had an option saying: "Rent increased? Flex your SIP to ₹500 this month to keep your streak alive with zero penalty"—I would have happily kept it going. The lack of feedback and the all-or-nothing nature of the SIP made stopping it the only sensible choice.
+
+[00:16:10] INTERVIEWER: That insight on the "silent tax" vs. "celebrated milestone" is exactly what we need to hear. Thank you so much, Rohan.
+================================================================================
+END OF TRANSCRIPT
+================================================================================

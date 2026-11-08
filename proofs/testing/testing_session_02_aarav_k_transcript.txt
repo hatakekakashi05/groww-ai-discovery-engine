@@ -1,0 +1,46 @@
+================================================================================
+GROWW MVP USABILITY TESTING TRANSCRIPT — SESSION 02
+================================================================================
+Participant ID: TEST_USER_02 (Aarav K., 26, Operations Lead)
+Session Context: Usability Testing of "Empathetic Behavioral Mirror & Goal Anchoring"
+Test Environment: Interactive Prototype (Groww Design System & Color Grading)
+Moderator: Product Manager, Growth Team, Groww
+Date & Time: November 03, 2026 • 18:00 IST
+Duration: 32 minutes • Moderated Screen & Think-Aloud Protocol
+Zero PII Notice: No real account details, PAN numbers, or bank credentials utilized.
+================================================================================
+
+[00:00:05] MODERATOR: Hi Aarav, thank you for joining us again. In our previous conversation, you mentioned how you redeemed ₹8,000 from an unanchored "Groww Nifty 50 Index Fund" to fund travel and clothes for your friend's destination wedding in Udaipur. Today, we're testing a new feature called "Goal Anchoring" and the "Behavioral Mirror". We'd love your honest reactions as you go through this scenario.
+
+[00:00:30] AARAV: Sure, let's test it out!
+
+[00:00:35] MODERATOR: On your screen, imagine this fund was set up from Day 1 as "First Home Downpayment", and you have currently accumulated ₹8,000 over 8 months. Now, simulate the moment you need money for the wedding: go ahead and click on the "Withdraw Funds / Stop SIP" button.
+
+[00:00:52] AARAV: Okay, clicking "Withdraw Funds / Stop SIP". 
+Wait, a modal has popped up. Let me read it:
+"Before you withdraw from 'First Home Downpayment'..."
+"You have maintained an 8-Month Unbroken Discipline Streak! Withdrawing your ₹8,000 will reset your progress to zero and delay your targeted Home Downpayment by approximately 14 months due to lost unit compounding."
+And then it offers two options:
+Option A: "Need temporary liquidity? Snooze SIP for 1 Month (Keep your ₹8,000 intact, resume auto-debit next month with ₹0 penalty)."
+Option B: "Confirm Full Redemption & Reset Goal."
+
+[00:01:45] MODERATOR: What is going through your mind right now as you read this?
+
+[00:01:52] AARAV: Whoa. This hits completely differently than the old app. In the old app, it just asked: "Are you sure you want to redeem 78.4 units?" That felt like a computer prompt. But this modal is literally holding up a mirror to my decision. When it says: "delay your targeted Home Downpayment by 14 months"—that makes me feel a genuine pang of guilt. 
+
+[00:02:22] MODERATOR: Which button do you feel compelled to click?
+
+[00:02:26] AARAV: I would 100% click "Snooze SIP for 1 Month". 
+
+[00:02:30] MODERATOR: Why?
+
+[00:02:33] AARAV: Because it gives me an honorable way out! In the old app, my only choice was to kill the SIP or face an overdraft charge. But here, the app recognizes that life happens. It lets me take a 1-month break to handle the Udaipur trip expenses, but it keeps my ₹8,000 safely locked away in my mental "Home" bucket. I would tell myself: "I will spend ₹5,000 from my savings on train tickets instead of flying to Udaipur, but I won't touch my home downpayment."
+
+[00:03:15] MODERATOR: What about the tone of the message? Does it feel manipulative or guilt-tripping?
+
+[00:03:22] AARAV: Not at all. It doesn't use scary warnings or red sirens. It just calmly states facts: "You saved for 8 months. If you take it out, you reset your streak." It feels like a wise older brother or mentor nudging you: "Are you sure you want to sacrifice your future house for a weekend party?" That’s the kind of protection you want from your financial app.
+
+[00:04:00] MODERATOR: That validation is incredibly encouraging. Thank you so much for your feedback, Aarav.
+================================================================================
+END OF TRANSCRIPT
+================================================================================

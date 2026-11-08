@@ -1,0 +1,46 @@
+================================================================================
+GROWW USER RESEARCH INTERVIEW TRANSCRIPT — SESSION 05
+================================================================================
+Participant ID: USER_EXP_05 (Vikram B.)
+Age: 24 | Location: Lucknow, Uttar Pradesh | Occupation: Field Sales Associate, FMCG
+Monthly Income: ₹32,000 | SIP Amount: ₹1,000/month
+Platform: Groww | Fund: Nifty 50 Index Fund | SIP Age: 7 Months
+Current Status: Paused at Month 7 & Raided (Churned)
+Interviewer: Product Manager, Growth Team, Groww
+Date & Time: October 28, 2026 • 15:30 IST
+Interview Duration: 36 minutes • Recorded via secure audio (Zero PII collected)
+Compliance Notice: Account numbers, PAN, bank details, and screenshots were NOT collected.
+================================================================================
+
+[00:00:08] INTERVIEWER: Hi Vikram, thank you for agreeing to speak with us today. We're speaking with young professionals who started their first mutual fund SIP to learn about their experiences and challenges. As a reminder, no personal account numbers, PAN details, or bank credentials are collected.
+
+[00:00:24] VIKRAM: Namaste sir. Yes, sure, I can tell you what happened.
+
+[00:00:28] INTERVIEWER: Let's start from the beginning. Why did you start your SIP 7 months ago, and what was your expectation?
+
+[00:00:36] VIKRAM: I work in field sales, so I ride around 40 to 50 kilometers daily visiting retailers. My salary is ₹32,000. My senior at work told me that instead of keeping money in savings where inflation eats it, I should start an SIP on Groww. He said even ₹1,000 a month will grow into something big over time. I thought this was a way to slowly build a safety buffer so I wouldn't have to borrow money from relatives if something went wrong.
+
+[00:02:10] INTERVIEWER: What was your experience over those 6 to 7 months?
+
+[00:02:18] VIKRAM: In the beginning, I was proud that I was putting away ₹1,000 every month. But after 6 months, I had put in ₹6,000. When I opened the Groww app, the portfolio value was showing ₹6,030. In six whole months, I had made ₹30! That didn't even cover the UPI auto-debit convenience or the feeling of locking money away. The app just showed "1-Day Return: -₹14" or "+₹8". It felt like the money was completely stuck and inactive.
+
+[00:04:45] INTERVIEWER: What happened in Month 7 that triggered you to stop the SIP?
+
+[00:04:54] VIKRAM: In Month 7, my motorcycle engine seized. For my job, without my bike, I can't earn my daily commission. The mechanic quoted ₹4,000 for replacement parts and labor. My savings account had barely ₹1,500 because it was end of the month. I opened Groww. I had ₹6,030 sitting in "Groww Nifty 50 Index Fund". Because the fund was just a generic fund name with no specific purpose, and because it had only grown ₹30 in half a year, I thought: "Why keep this ₹6,000 sitting idle here doing nothing when my bike is broken?" I redeemed ₹5,000 immediately, paid the mechanic, and stopped the SIP so next month's salary wouldn't get debited.
+
+[00:07:40] INTERVIEWER: When you were about to redeem, did you pause to think about your original goal of building a safety buffer?
+
+[00:07:48] VIKRAM: Not really, because Groww never treated it like a safety buffer. It just listed it under "Holdings" right next to stocks and F&O. It felt like an extra bank balance with 2-day withdrawal. If the app had asked me when I started: "Vikram, what is this ₹1,000 for?", and I had named it "Emergency Mobility Fund", then when my bike broke down, I would have realized: "Wait, this fund was meant for an emergency, but maybe I don't need to stop the SIP forever. Can I just pause for 1 month and restart next month?" But the app gave me two extreme options: either keep paying ₹1,000 or cancel completely. So I cancelled.
+
+[00:10:30] INTERVIEWER: Have you restarted your SIP since then?
+
+[00:10:36] VIKRAM: No. Once you break the habit, you don't go back. The app never reached out, never asked if I was okay, and never offered an easy way to resume with a smaller amount like ₹500. It just sent an email saying "SIP Cancelled successfully." That was it.
+
+[00:12:50] INTERVIEWER: If Groww had offered a 1-month pause button without cancelling your mandate, or allowed you to flex the amount to ₹500 during bike repairs, would you have stayed?
+
+[00:13:02] VIKRAM: 100%. I didn't want to quit investing. I just had a temporary cash crunch because of my bike. If Groww had said: "Take a 1-month breather, your mandate remains active, and we will resume automatically next month", I would have loved that. Instead, having to cancel everything felt permanent.
+
+[00:15:20] INTERVIEWER: That distinction between a temporary cash shock and permanent abandonment is crucial for us. Thank you very much, Vikram.
+================================================================================
+END OF TRANSCRIPT
+================================================================================

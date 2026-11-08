@@ -1,0 +1,43 @@
+================================================================================
+GROWW MVP USABILITY TESTING TRANSCRIPT — SESSION 03
+================================================================================
+Participant ID: TEST_USER_03 (Rohan S., 24, QA Engineer)
+Session Context: Usability Testing of "Milestone Copilot & Elastic Contribution Flexibility"
+Test Environment: Interactive Prototype (Groww Design System & Color Grading)
+Moderator: Product Manager, Growth Team, Groww
+Date & Time: November 04, 2026 • 19:30 IST
+Duration: 34 minutes • Moderated Screen & Think-Aloud Protocol
+Zero PII Notice: No real account details, PAN numbers, or bank credentials utilized.
+================================================================================
+
+[00:00:08] MODERATOR: Hi Rohan, welcome back. In our initial interview, you shared how your monthly ₹2,000 auto-debit started feeling like an unrewarding "silent tax" after 6 months when your ₹12,000 investment had gained only ₹60, especially when your rent jumped by ₹2,500. Today, we want to test two new capabilities in the Groww MVP: the Milestone Copilot and Elastic Contribution Flexibility.
+
+[00:00:32] ROHAN: Glad to be back. Let's see what you guys came up with.
+
+[00:00:38] MODERATOR: On your screen, look at the Milestone Overview for Month 6. Notice how the dashboard tracks your "Wealth Foundation Shield" instead of just raw portfolio gain. Then, click on "Adjust Contribution" or ask a question to the Milestone Copilot.
+
+[00:00:54] ROHAN: Looking at the screen now. The header says:
+"Portfolio: ₹12,060 | Units Accumulated: 120 Units"
+"Foundation Metric: 6 Months Habit Mastered • You have laid 25% of your 2-Year Wealth Foundation."
+And there is a visual chart that compares Year 1 (where principal is 98%) vs. Year 5 (where compounding generates 45% of total wealth). That chart is super helpful. It makes it obvious that you can't expect the tree to bear fruit before the trunk even grows.
+
+[00:01:40] MODERATOR: What about the copilot? Try asking it about your dilemma: "My rent increased, should I cancel my SIP?"
+
+[00:01:48] ROHAN: (Typing into Copilot) "My apartment rent increased by ₹2,500. Should I stop my ₹2,000 SIP?"
+Let's see...
+"Hi Rohan! Managing everyday living expenses must always come first. However, stopping your SIP completely breaks your 6-month consistency momentum. Did you know you don't have to cancel? With Groww Elastic Flex, you can temporarily adjust your monthly contribution down to ₹500 for the next 3 months. This keeps your UPI mandate intact, preserves your discipline streak, and gives you ₹1,500 of immediate breathing room to absorb the rent increase. When your finances stabilize, you can restore ₹2,000 with a single tap."
+
+[00:02:40] ROHAN: Man... that is brilliant. Why didn't Groww have this 4 months ago? When my rent went up, my only options were "Keep paying ₹2,000 or Cancel". Because ₹2,000 was hurting my monthly budget, I had no choice but to cancel. If Groww had told me I could just pay ₹500 without feeling like a failure, I would have clicked that in one second!
+
+[00:03:08] MODERATOR: And how does that make you feel about the relationship with the app?
+
+[00:03:14] ROHAN: It transforms Groww from a dumb deduction broker into a genuine financial companion. A broker just wants the order to go through or fails silently. A companion understands that young people have fluctuating cash flows—rents go up, unexpected medical bills happen. Giving me the flexibility to dial down to ₹500 means I stay an investor instead of dropping out of the market entirely.
+
+[00:03:45] MODERATOR: And if you see someone asking you about funds or stock tips in the copilot, do you expect it to recommend specific funds?
+
+[00:03:53] ROHAN: No, actually. I tried typing: "Which fund should I switch to for higher returns?" And it replied: "As an educational companion, I cannot recommend specific funds or stocks. Your current fund matches broad market growth. What we can do is calculate how adjusting your milestone timeline or contribution amount helps you reach your financial goal." I actually respect that. It feels ethical and regulated, not like a pushy salesperson trying to get commissions.
+
+[00:04:30] MODERATOR: Rohan, thank you so much for this feedback. It confirms our hypothesis that flexibility and educational reassurance together protect retention.
+================================================================================
+END OF TRANSCRIPT
+================================================================================
