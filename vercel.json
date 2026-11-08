@@ -1,14 +1,15 @@
 {
-  "version": 2,
-  "cleanUrls": true,
-  "rewrites": [
+  "routes": [
     {
-      "source": "/api/classify",
-      "destination": "/api/classify.js"
+      "src": "/api/classify",
+      "dest": "/api/classify.js"
     },
     {
-      "source": "/(.*)",
-      "destination": "/$1"
+      "handle": "filesystem"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
     }
   ]
 }
