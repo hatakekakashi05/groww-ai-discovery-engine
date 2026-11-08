@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NL_Groww — Strategic Initiative: 12-Month SIP Retention</title>
+  <style>
+    :root {
+      --bg-dark: #0c0f14;
+      --card-bg: #181d24;
+      --card-border: #2b3240;
+      --primary: #00d09c;   /* Groww Signature Green */
+      --accent: #5367ff;    /* Groww Indigo / Accent Blue */
+      --emerald: #00d09c;
+      --amber: #ffb800;     /* Groww Gold / Alert */
+      --text-main: #ffffff;
+      --text-muted: #9ba3af;
+      --text-dim: #6b7280;
+      --font-base: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-base);
+      background-color: #020617;
+      color: var(--text-main);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    /* Presentation Navigation Bar */
+    .controls {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 20px;
+      background: #0f172a;
+      padding: 10px 24px;
+      border-radius: 9999px;
+      border: 1px solid #334155;
+      position: sticky;
+      top: 10px;
+      z-index: 1000;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    }
+
+    .controls button {
+      background: #1e293b;
+      color: var(--text-main);
+      border: 1px solid #475569;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .controls button:hover {
+      background: #334155;
+      border-color: var(--primary);
+    }
+
+    .slide-indicator {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--primary);
+      min-width: 90px;
+      text-align: center;
+    }
+
+    /* 16:9 Aspect Ratio Slide Container */
+    .slide-deck {
+      width: 100%;
+      max-width: 1200px;
+      position: relative;
+    }
+
+    .slide {
+      display: none;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: var(--bg-dark);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 44px 52px;
+      position: relative;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+    }
+
+    .slide.active {
+      display: flex;
+    }
+
+    /* Slide Header */
+    .slide-header {
+      margin-bottom: 20px;
+    }
+
+    .slide-category {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--primary);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .slide-category::before {
+      content: "";
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--primary);
+    }
+
+    .slide-title {
+      font-size: 25px;
+      line-height: 1.3;
+      font-weight: 800;
+      color: #ffffff;
+      letter-spacing: -0.02em;
+    }
+
+    /* Slide Content Layouts */
+    .slide-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 18px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+      height: 100%;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 18px 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .card h3 {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .card h4 {
+      font-size: 14.5px;
+      font-weight: 600;
+      color: #e2e8f0;
+    }
+
+    .card p, .card li {
+      font-size: 14px;
+      line-height: 1.5;
+      color: var(--text-muted);
+    }
+
+    .card ul {
+      padding-left: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .highlight-badge {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .badge-amber {
+      background: rgba(255, 184, 0, 0.15);
+      color: var(--amber);
+      border: 1px solid rgba(255, 184, 0, 0.3);
+    }
+
+    .badge-emerald {
+      background: rgba(0, 208, 156, 0.15);
+      color: var(--primary);
+      border: 1px solid rgba(0, 208, 156, 0.3);
+    }
+
+    .badge-blue {
+      background: rgba(83, 103, 255, 0.15);
+      color: #818cf8;
+      border: 1px solid rgba(83, 103, 255, 0.3);
+    }
+
+    /* Metric Big Callout */
+    .metric-hero {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+    }
+
+    .metric-value {
+      font-size: 40px;
+      font-weight: 900;
+      color: #ffffff;
+      line-height: 1;
+    }
+
+    .metric-sub {
+      font-size: 14px;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    /* Image Container */
+    .img-container {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      height: 100%;
+    }
+
+    .img-container img {
+      width: 100%;
+      height: auto;
+      max-height: 380px;
+      object-fit: contain;
+      border-radius: 8px;
+      border: 1px solid #334155;
+    }
+
+    .img-caption {
+      font-size: 13.5px;
+      color: #9ba3af;
+      text-align: center;
+      line-height: 1.4;
+    }
+
+    /* Slide Footer */
+    .slide-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid #232a35;
+      padding-top: 12px;
+      margin-top: 12px;
+      font-size: 12.5px;
+      color: var(--text-dim);
+    }
+
+    .slide-footer a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .slide-footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Print Stylesheet for exact 10-page PDF export */
+    @page {
+      size: landscape;
+      margin: 0;
+    }
+
+    @media print {
+      html, body {
+        background: #0c0f14 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+
+      .controls {
+        display: none !important;
+      }
+
+      .slide-deck {
+        max-width: 100% !important;
+        width: 100% !important;
+      }
+
+      .slide {
+        display: flex !important;
+        page-break-after: always !important;
+        break-after: page !important;
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+        aspect-ratio: 16 / 9;
+        height: 100vh !important;
+        width: 100vw !important;
+        border: none !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        padding: 36px 52px !important;
+        background: #0c0f14 !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Controls Bar -->
+  <div class="controls">
+    <button onclick="prevSlide()">◀ Previous</button>
+    <div class="slide-indicator" id="slideIndicator">Slide 1 of 10</div>
+    <button onclick="nextSlide()">Next ▶</button>
+    <button onclick="window.print()">🖨️ Export PDF (Ctrl+P)</button>
+  </div>
+
+  <div class="slide-deck">
+
+    <!-- SLIDE 1: Title & Strategic Context -->
+    <div class="slide active" id="slide-1">
+      <div class="slide-header">
+        <div class="slide-category">Strategic Growth Initiative • Groww</div>
+        <h1 class="slide-title">Plugging India’s 94.5% SIP Churn Leak: Retaining First-Time Mutual Fund Investors at Groww</h1>
+      </div>
+      <div class="slide-body">
+        <div class="grid-2" style="grid-template-columns: 1.15fr 0.85fr; align-items: stretch;">
+          <div class="img-container">
+            <a href="assets/market_infographic.jpg" target="_blank" title="Click to view full image">
+              <img src="assets/market_infographic.jpg" alt="India's Mutual Fund & SIP Market - Size, Growth and Competitive Landscape">
+            </a>
+            <div class="img-caption">
+              <strong>Empirical Market Baseline (AMFI / Industry Sep 2026):</strong><br>
+              ₹82.64L Cr Total AUM • <strong>94.5% SIP Discontinuation Ratio</strong> • Groww: 2.42 Cr Users (14% SIP Share)
+            </div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 14px; justify-content: space-between;">
+            <div class="card" style="border-left: 4px solid var(--primary); padding: 16px 20px;">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <h3 style="font-size: 16px;">🎯 Strategic Objective</h3>
+                <span class="highlight-badge badge-emerald">Growth Mandate</span>
+              </div>
+              <div class="metric-hero">
+                <span class="metric-value" style="font-size: 34px;">32% ➔ 48%</span>
+                <span class="metric-sub">+1600 bps Lift in 12M Active Retention</span>
+              </div>
+              <p style="font-size: 13.5px;"><strong>Goal:</strong> Retain first-time mutual fund investors with an active SIP (≥1 debit in last 30 days) 12 months after starting.</p>
+            </div>
+            <div class="card" style="border-left: 4px solid var(--amber); padding: 16px 20px;">
+              <h3 style="font-size: 16px; color: var(--amber);">⚠️ The Leaky Bucket Crisis</h3>
+              <p style="font-size: 13.5px;">Despite monthly inflows crossing ₹32,490 Cr, <strong>~95 SIPs stop for every 100 started</strong>. Groww leads acquisition, but suffers disproportionately from early retail churn.</p>
+            </div>
+            <div class="card" style="background: rgba(24, 29, 36, 0.7); padding: 14px 20px;">
+              <h4 style="font-size: 13.5px; color: #cbd5e1;">🔒 Strict Operating Guardrails</h4>
+              <p style="font-size: 12.5px; color: var(--text-muted); line-height: 1.4;">
+                • <strong>Zero Stock/Fund Recommendations:</strong> Unbiased, platform-agnostic, SEBI RIA compliant.<br>
+                • <strong>Zero Fear, FOMO, or Urgency Tactics:</strong> Strictly non-coercive habit loops.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slide-footer">
+        <span>Groww Growth Team • First-Time Investor Retention</span>
+        <span>Slide 1 / 10 • Artifact: <a href="https://drive.google.com/drive/u/0/folders/1CXtF1JZZmIiB_M6IW4279FOLK4KprmNT" target="_blank">Master_Context.md</a></span>
+      </div>
+    </div>
+
+    <!-- SLIDE 2: Business Metric Decomposition -->
+    <div class="slide" id="slide-2">
+      <div class="slide-header">
+        <div class="slide-category">Part 2: Metric Decomposition</div>
+        <h2 class="slide-title">12-Month SIP Retention Breaks Down into Milestone Conviction, Purpose Anchoring, and Habit Elasticity</h2>
+      </div>
+      <div class="slide-body">
+        <div class="grid-3">
+          <div class="card" style="border-top: 4px solid var(--primary);">
+            <div class="highlight-badge badge-emerald">Weight: 45% (Primary Anchor)</div>
+            <h3>1. Milestone Conviction</h3>
+            <h4>Effort-Reward Reinforcement</h4>
+            <ul>
+              <li><strong>Expectation Reset:</strong> Overcoming the disillusionment of flat Year-1 compounding.</li>
+              <li><strong>Cognitive Statement Reframing:</strong> Celebrating accumulated capital and discipline badges rather than day-trading P&L.</li>
+              <li><strong>Unit Volume Accumulation:</strong> Showing that flat NAVs buy more units before the next leg up.</li>
+            </ul>
+          </div>
+          <div class="card" style="border-top: 4px solid var(--accent);">
+            <div class="highlight-badge badge-blue">Weight: 40% (Crucial Shield)</div>
+            <h3>2. Purpose Anchoring</h3>
+            <h4>Mental Accounting Architecture</h4>
+            <ul>
+              <li><strong>Emotional Ring-Fencing:</strong> Transforming generic fund tickers into named life goals (Emergency Fund, Downpayment).</li>
+              <li><strong>Discretionary Plunder Friction:</strong> Psychological barriers against liquidating funds for weddings or travel.</li>
+              <li><strong>Paced Milestone Tracking:</strong> Visualizing progress toward a target corpus percentage.</li>
+            </ul>
+          </div>
+          <div class="card" style="border-top: 4px solid var(--amber);">
+            <div class="highlight-badge badge-amber">Weight: 15%</div>
+            <h3>3. Habit Elasticity</h3>
+            <h4>Graceful Continuity Loops</h4>
+            <ul>
+              <li><strong>1-Cycle Micro-Snooze:</strong> Single-tap pause with auto-resumption to protect habit during tight months.</li>
+              <li><strong>Flex-Installment:</strong> Ability to contribute ₹500 in tight months instead of ₹2,000.</li>
+              <li><strong>30-Day Recovery:</strong> Easy reactivation loop within the active window.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card">
+          <p><strong>Strategic Leverage Takeaway:</strong> 85% of early churn is concentrated in <em>Effort-Reward Disillusionment</em> (invisible compounding) and <em>Unanchored Capital Plunder</em> (fungible cash raiding). Solving these two unlocks the 48% retention target.</p>
+        </div>
+      </div>
+      <div class="slide-footer">
+        <span>Business Metric Decomposition Tree</span>
+        <span>Slide 2 / 10 • Artifact: <a href="https://drive.google.com/drive/u/0/folders/1CXtF1JZZmIiB_M6IW4279FOLK4KprmNT" target="_blank">Metric_Decomposition.md</a></span>
+      </div>
+    </div>
+
+    <!-- SLIDE 3: AI Discovery Engine Architecture -->
+    <div class="slide" id="slide-3">
+      <div class="slide-header">
+        <div class="slide-category">AI Discovery Engine Workflow</div>
+        <h2 class="slide-title">Mining 14,240 Churn Signals with Semantic Clustering, Sentiment Drift, and Strict Eval Filters</h2>
+      </div>
+      <div class="slide-body">
+        <div class="grid-4">
+          <div class="card">
+            <div class="highlight-badge badge-blue">Stage 1: Ingestion</div>
+            <h4>14,240 Signals</h4>
+            <p>Aggregated public Reddit threads (r/IndiaInvestments), Play Store reviews, Twitter grievances, and exit surveys.</p>
+          </div>
+          <div class="card">
+            <div class="highlight-badge badge-blue">Stage 2: Sanitization</div>
+            <h4>Privacy & Safety</h4>
+            <p>PII masking, account number removal, and noise reduction across conversational transcripts.</p>
+          </div>
+          <div class="card">
+            <div class="highlight-badge badge-emerald">Stage 3: Embedding</div>
+            <h4>Semantic Clustering</h4>
+            <p>Multi-dimensional vector grouping into 4 behavioral friction buckets and intent discovery.</p>
+          </div>
+          <div class="card">
+            <div class="highlight-badge badge-amber">Stage 4: Verification</div>
+            <h4>Eval Benchmark</h4>
+            <p>Validated against 20 hand-labeled golden ground-truth items with strict non-advisory constraints.</p>
+          </div>
+        </div>
+        <div class="card" style="background: rgba(24, 29, 36, 0.7);">
+          <h3>🔍 Discovery Engine Core Capability</h3>
+          <p>Detects the <strong>unspoken emotional gap between monthly sacrifice and invisible progress</strong>. When a user writes <em>"SIP is useless, cancelled"</em>, the engine uncovers the true underlying driver: after 6 months of discipline, a ₹12,000 balance showed ₹12,040, triggering expectation disconfirmation.</p>
+        </div>
+      </div>
+      <div class="slide-footer">
+        <span>Discovery Engine Architecture & Testing Protocol</span>
+        <span>Slide 3 / 10 • <a href="https://groww-ai-discovery.vercel.app" target="_blank" style="color:var(--primary); font-weight:700;">AI Discovery Engine ↗</a> | <a href="https://drive.google.com/drive/u/0/folders/1CXtF1JZZmIiB_M6IW4279FOLK4KprmNT" target="_blank">AI_Evidence_Log.md</a></span>
+      </div>
+    </div>
+
+    <!-- SLIDE 4: Discovery Engine Findings vs Golden Set -->
+    <div class="slide" id="slide-4">
+      <div class="slide-header">
+        <div class="slide-category">Discovery Findings & Evidence Log</div>
+        <h2 class="slide-title">76% of SIP Churn Stems from Flat Statement Disillusionment (41.2%) and Unanchored Capital Raiding (34.6%)</h2>
+      </div>
+      <div class="slide-body">
+        <div class="grid-2">
+          <div class="card">
+            <h3>📊 Corpus Signal Breakdown (14,240 Items)</h3>
+            <ul>
+              <li><strong>41.2% Effort-Reward Disillusionment (5,867 signals):</strong> Frustration over flat returns after 5–6 months; feeling that money is "doing nothing".</li>
+              <li><strong>34.6% Unanchored Capital Plunder (4,927 signals):</strong> Cashing out for weddings, gadgets, festivals, or trips because fund had no assigned life job.</li>
+              <li><strong>18.4% Cash-Flow & Mandate Friction (2,620 signals):</strong> Paycheck timing lags and bank auto-debit bounce fees.</li>
+              <li><strong>5.8% Jargon & Cognitive Fatigue (826 signals):</strong> Confusion over tracking errors, NAV changes, and conflicting social media noise.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>🎯 Golden Set Benchmark (20 Items)</h3>
+            <ul>
+              <li><strong>Agreement Rate:</strong> <strong>85.0%</strong> (17/20 correct classifications; Cohen's κ = 0.79).</li>
+              <li><strong>Correction 1:</strong> Swapped "Changed bank account" from cognitive overload to <em>Cash-Flow Mandate Failure</em>.</li>
+              <li><strong>Correction 2:</strong> Rejected AI tag "Market Timing Speculator"; corrected to <em>Loss Aversion & Disillusionment</em>.</li>
+              <li><strong>Correction 3:</strong> Corrected daily P&L distress from admin confusion to <em>Effort-Reward Disillusionment</em>.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card" style="border-left: 4px solid var(--primary);">
+          <p><strong>Core Discovery:</strong> First-time investors do not quit because the Nifty 50 drops 10%. They quit because <strong>after 6 months of sacrificing ₹2,000/month, their statement looks like an electricity bill showing +₹35</strong>, and the money has no emotional goal protecting it from lifestyle spending.</p>
+        </div>
+      </div>
+      <div class="slide-footer">
+        <span>Hand-Labelled Benchmark & Model Calibration</span>
+        <span>Slide 4 / 10 • Proofs: <a href="https://drive.google.com/drive/u/0/folders/1CXtF1JZZmIiB_M6IW4279FOLK4KprmNT" target="_blank">20_Golden_Set.txt</a> | <a href="https://drive.google.com/drive/u/0/folders/1CXtF1JZZmIiB_M6IW4279FOLK4KprmNT" target="_blank">Corpus_Volume.txt</a> | <a href="https://groww-ai-discovery.vercel.app" target="_blank" style="color:var(--primary); font-weight:700;">AI Discovery Engine ↗</a></span>
+      </div>
+    </div>
+
+    <!-- SLIDE 5: Primary User Research (6 Interviews) -->
+    <div class="slide" id="slide-5">
+      <div class="slide-header">
+        <div class="slide-category">Part 3: Primary User Research</div>
+        <h2 class="slide-title">Primary Research: Investors Quit When Statements Feel Underwhelming and Funds Lack Emotional Boundaries</h2>
+      </div>
+      <div class="slide-body">
+        <div class="card" style="padding: 12px 18px;">
+          <p><strong>Target Segment: "Early-Career Climbers"</strong> (Ages 22–27, ₹30k–₹65k salary, ₹1k–₹3k monthly SIP on Groww, 0 prior equity experience). 6 in-depth qualitative interviews conducted under strict privacy protocols.</p>
+        </div>
+        <div class="grid-3">
+          <div class="card">
+            <h4>Sneha M. (23, Bangalore) • Paused M5</h4>
+            <p><em>"Invested ₹7,500; value was ₹7,485 (-₹15). Statements show cold NAV numbers. I felt like I was making monthly sacrifices for money that does nothing. I paused it."</em></p>
+          </div>
+          <div class="card">
+            <h4>Aarav K. (26, Jaipur) • Churned M8</h4>
+            <p><em>"Accumulated ₹8,000 in a generic 'Nifty Index' fund. Raided the whole thing for an Udaipur wedding. It had no specific purpose, so it was just easy cash."</em></p>
+          </div>
+          <div class="card">
+            <h4>Rohan S. (24, Pune) • Churned M6</h4>
+            <p><em>"Invested ₹12,000; value was ₹12,060. Every month ₹2,000 was deducted with zero positive feedback. It felt like an unwanted utility bill, so I stopped it."</em></p>
+          </div>
+          <div class="card">
+            <h4>Priya T. (25, Hyderabad) • Retained M11</h4>
+            <p><em>"Earmarked it as 'Freedom Fund' from Day 1; brother explained unit accumulation during Month 4 dip. Survived because of an emotional goal anchor."</em></p>
+          </div>
+          <div class="card">
+            <h4>Vikram B. (24, Lucknow) • Churned M7</h4>
+            <p><em>"Bike broke down; raided ₹6,000 from his mutual fund because 'it made only ₹30 in 6 months and wasn't tied to any goal'."</em></p>
+          </div>
+          <div class="card">
+            <h4>Ananya D. (27, Delhi) • Churned M9</h4>
+            <p><em>"Invested ₹22,500 over 9 months; value ₹22,650. Statements looked like electricity bills; liquidated to buy an iPad."</em></p>
+          </div>
+        </div>
+      </div>
+      <div class="slide-footer">
+        <span>Primary Qualitative Research (6 Target Interviews)</span>
+        <span>Slide 5 / 10 • Transcripts: <a href="https://drive.google.com/drive/u/0/folders/1CXtF1JZZmIiB_M6IW4279FOLK4KprmNT" target="_blank">Sneha.txt</a> | <a href="https://drive.google.com/drive/u/0/folders/1CXtF1JZZmIiB_M6IW4279FOLK4KprmNT" target="_blank">Aarav.txt</a> | <a href="https://drive.google.com/drive/u/0/folders/1CXtF1JZZmIiB_M6IW4279FOLK4KprmNT" target="_blank">Rohan.txt</a></span>
+      </div>
+    </div>
+
+    <!-- SLIDE 6: Problem Evolution & Definition -->
+    <div class="slide" id="slide-6">
+      <div class="slide-header">
+        <div class="slide-category">Part 4: Problem Evolution & Definition</div>
+        <h2 class="slide-title">Solving the Month 4–8 "Effort-Reward Disillusionment & Unanchored Capital Vacuum" for Early-Career Climbers</h2>
+      </div>
+      <div class="slide-body">
+        <div class="card" style="background: rgba(24, 29, 36, 0.8); border-left: 4px solid var(--primary);">
+          <h3>Evolution of PM Thinking</h3>
+          <p><strong>Business Metric (M12 Churn) ➔ Outcomes (Milestone Conviction + Purpose Anchoring) ➔ AI Discovery (76% Progress/Goal Gaps) ➔ Primary Research (Flat Statements & Easy Raiding) ➔ Sharpened Problem Definition</strong></p>
+        </div>
+        <div class="grid-2">
+          <div class="card">
+            <h3>🚨 The Problem Definition</h3>
+            <p>First-time mutual fund investors abandon their SIP within 12 months because <strong>the mathematical invisibility of Year-1 compounding creates an "Effort-Reward Imbalance"</strong>—making monthly sacrifices feel unrewarding through cold, flat statements—while <strong>the absence of goal-anchored mental accounting leaves this unrewarding capital exposed as the first fungible asset to be paused or raided when everyday life demands cash.</strong></p>
+          </div>
+          <div class="card">
+            <h3>❌ Why Current Workarounds Fail</h3>
+            <ul>
+              <li><strong>Mental Notes / Excel Tracking:</strong> Too easily overridden during emotional spending moments.</li>
+              <li><strong>Moving Back to FDs:</strong> Provides linear comfort, but inflation erodes purchasing power.</li>
+              <li><strong>Reddit / Fin-Influencers:</strong> Saturated with trading noise and doom-mongering that amplify doubt.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="slide-footer">
+        <span>Problem Definition & Evolution Synthesis</span>
+        <span>Slide 6 / 10 • Artifact: <a href="https://drive.google.com/drive/u/0/folders/1CXtF1JZZmIiB_M6IW4279FOLK4KprmNT" target="_blank">Problem_Definition.md</a></span>
+      </div>
+    </div>
+
+    <!-- SLIDE 7: Solution Rationale & Concept -->
+    <div class="slide" id="slide-7">
+      <div class="slide-header">
+        <div class="slide-category">Solution Rationale & Architecture</div>
+        <h2 class="slide-title">Groww "Anchor & Milestone": Purpose-Driven Mental Accounting and Cognitive Progress Statements Preserve Investor Habits</h2>
+      </div>
+      <div class="slide-body">
+        <div class="grid-2">
+          <div class="card" style="border-top: 4px solid var(--accent);">
+            <h3>⚓ Module 1: AI Purpose Anchor</h3>
+            <h4>Mental Accounting & Goal Shield Engine</h4>
+            <ul>
+              <li><strong>Emotional Ring-Fencing:</strong> Transforms generic mutual funds into emotionally bounded milestones (e.g., "Emergency Freedom Buffer", "First 1 Lakh Milestone").</li>
+              <li><strong>The Empathetic Behavioral Mirror:</strong> When a user considers liquidating, gently surfaces goal delay impact (e.g., *"Delay home goal by 14 months"*).</li>
+              <li><strong>100% Non-Coercive:</strong> Instant withdrawal is always available in 1 tap; zero dark patterns.</li>
+            </ul>
+          </div>
+          <div class="card" style="border-top: 4px solid var(--primary);">
+            <h3>🌱 Module 2: Cognitive Statement Reframer</h3>
+            <h4>Milestone Progress & Compounding Copilot</h4>
+            <ul>
+              <li><strong>Milestone-First Statements:</strong> Replaces cold NAV/folio statements with progress bars: <em>"Emergency Cushion: ₹12,000 / ₹25,000 (48% Funded)"</em>.</li>
+              <li><strong>Discipline Badges:</strong> Celebrates 6-month unbroken consistency streaks.</li>
+              <li><strong>Unit Volume Education:</strong> Reassures flat periods: <em>"Your ₹2,000 acquired 8.4 extra units at lower NAV this month."</em></li>
+              <li><strong>Strict Compliance:</strong> Zero fund/stock tips; zero FOMO/urgency.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card">
+          <p><strong>Value Creation:</strong> Protects hard-earned savings from impulsive discretionary raiding and replaces statement disillusionment with milestone pride, bridging the critical Year-1 gap.</p>
+        </div>
+      </div>
+      <div class="slide-footer">
+        <span>Feature Design & Behavioral Economics Architecture</span>
+        <span>Slide 7 / 10 • <a href="https://groww-anchor-mvp.vercel.app" target="_blank" style="color:var(--primary); font-weight:700;">Groww Anchor MVP ↗</a> | <a href="https://drive.google.com/drive/u/0/folders/1CXtF1JZZmIiB_M6IW4279FOLK4KprmNT" target="_blank">MVP_Specification.md</a></span>
+      </div>
+    </div>
+
+    <!-- SLIDE 8: Eval-Gated MVP Architecture -->
+    <div class="slide" id="slide-8">
+      <div class="slide-header">
+        <div class="slide-category">Part 5: Eval-Gated AI Architecture</div>
+        <h2 class="slide-title">Why AI Earns Its Place: Synthesizing Milestone Narratives, Defusing Doubt, and Enforcing SEBI Guardrails</h2>
+      </div>
+      <div class="slide-body">
+        <div class="grid-2">
+          <div class="card">
+            <h3>🤖 Where AI Genuinely Earns Its Place</h3>
+            <ul>
+              <li><strong>Contextual Doubt Interpretation:</strong> Users ask natural language questions: <em>"It's been 6 months, why has it not grown?"</em> AI parses the emotional state and translates compounding mechanics into plain English.</li>
+              <li><strong>Personalized Milestone Narratives:</strong> Transforms complex transaction ledgers into encouraging milestone stories.</li>
+              <li><strong>What a Non-AI Version Misses:</strong> Static rules deliver generic PDF tables and binary "Redeem" buttons with zero empathy.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>🛡️ Eval-Gated Safety & Fallback Pipeline</h3>
+            <ul>
+              <li><strong>Deterministic Advice Blocker:</strong> Instantly intercepts queries asking <em>"Which fund to buy?"</em> or <em>"Will market crash?"</em> and triggers SEBI educational disclaimer.</li>
+              <li><strong>Urgency & Fear Blacklist:</strong> Token filter guarantees zero FOMO, guilt, or anxiety words.</li>
+              <li><strong>Quality Confidence Gate (≥92% Confidence):</strong> Low confidence queries fallback to certified AMFI educational guides.</li>
+              <li><strong>Golden Set Benchmark:</strong> 100% advice avoidance, 0.00 toxicity score, 95% accuracy.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card" style="border-left: 4px solid var(--amber);">
+          <p><strong>Prominent Disclaimer:</strong> <em>"Groww Anchor & Milestone is a non-advisory educational companion. It does not provide investment recommendations. Mutual fund investments are subject to market risks."</em></p>
+        </div>
+      </div>
+      <div class="slide-footer">
+        <span>Eval-Gated AI Pipeline & Safe Fallbacks</span>
+        <span>Slide 8 / 10 • <a href="https://groww-anchor-mvp.vercel.app" target="_blank" style="color:var(--primary); font-weight:700;">Milestone Copilot ↗</a> | <a href="https://drive.google.com/drive/u/0/folders/1CXtF1JZZmIiB_M6IW4279FOLK4KprmNT" target="_blank">MVP_Specification.md</a></span>
+      </div>
+    </div>
+
+    <!-- SLIDE 9: User Validation with MVP -->
+    <div class="slide" id="slide-9">
+      <div class="slide-header">
+        <div class="slide-category">Part 6: MVP User Testing & Feedback</div>
+        <h2 class="slide-title">Target Users Overcome Underwhelming Statements and Choose Goal Preservation Over Discretionary Raids</h2>
+      </div>
+      <div class="slide-body">
+        <div class="grid-3">
+          <div class="card">
+            <h4>Sneha M. • Statement Task</h4>
+            <div class="highlight-badge badge-emerald">Task Success: Disillusionment Defused</div>
+            <p>Milestone statement reframed -₹15 into 30% of emergency buffer and 6.2 extra units.</p>
+            <p><strong>Quote:</strong> <em>"When I saw I had built 30% of my safety net, I felt proud instead of foolish. Looking at units made me realize I hadn't wasted money."</em></p>
+          </div>
+          <div class="card">
+            <h4>Aarav K. • Raiding Task</h4>
+            <div class="highlight-badge badge-emerald">Task Success: Goal Preserved</div>
+            <p>Behavioral mirror showed 14-month goal delay; Aarav chose to cut hotel expenses instead of killing his Home Downpayment goal.</p>
+            <p><strong>Quote:</strong> <em>"Seeing 'First Home Downpayment' and the 14-month delay made me pause. I chose to cut my hotel budget rather than kill my goal."</em></p>
+          </div>
+          <div class="card">
+            <h4>Rohan S. • Silent Expense Task</h4>
+            <div class="highlight-badge badge-emerald">Task Success: Habit Restored</div>
+            <p>Milestone copilot explained Year-1 foundation phase; replaced monthly bill feeling with investment pride.</p>
+            <p><strong>Quote:</strong> <em>"Having an app that actually explains what this sacrifice is building makes it feel like an investment, not a tax."</em></p>
+          </div>
+        </div>
+        <div class="card">
+          <h3>🔄 V2 Iteration Backlog from Testing</h3>
+          <p><strong>1. Instant Liquidity Reassurance:</strong> Added visible badge: <em>"100% Liquid • No Lock-in • You are in control"</em> on all goal screens.<br>
+          <strong>2. Dynamic Re-Pacing:</strong> Enabled 1-tap milestone renaming and target adjustment.</p>
+        </div>
+      </div>
+      <div class="slide-footer">
+        <span>User Validation & Iteration Learnings (3 Target Users)</span>
+        <span>Slide 9 / 10 • Transcripts: <a href="https://drive.google.com/drive/u/0/folders/1CXtF1JZZmIiB_M6IW4279FOLK4KprmNT" target="_blank">Test_01.txt</a> | <a href="https://drive.google.com/drive/u/0/folders/1CXtF1JZZmIiB_M6IW4279FOLK4KprmNT" target="_blank">Test_02.txt</a> | <a href="https://drive.google.com/drive/u/0/folders/1CXtF1JZZmIiB_M6IW4279FOLK4KprmNT" target="_blank">Test_03.txt</a></span>
+      </div>
+    </div>
+
+    <!-- SLIDE 10: Success Metrics, Risks & Governance -->
+    <div class="slide" id="slide-10">
+      <div class="slide-header">
+        <div class="slide-category">Part 7 & 8: Success Metrics, Risks & Mitigations</div>
+        <h2 class="slide-title">Lifting 12-Month Retention to 48% by Anchoring Purpose, Celebrating Discipline, and Eliminating Exit Friction</h2>
+      </div>
+      <div class="slide-body">
+        <div class="grid-2">
+          <div class="card">
+            <h3>📈 Success Metrics Architecture</h3>
+            <ul>
+              <li><strong>North Star Metric:</strong> 12-Month Active SIP Retention: <strong>32% ➔ 48%</strong> (+1600 bps).</li>
+              <li><strong>Leading Indicator 1:</strong> Goal Anchoring Attachment Rate <strong>&gt;75%</strong> of new SIP starts.</li>
+              <li><strong>Leading Indicator 2:</strong> Milestone Statement Engagement <strong>&gt;65%</strong> viewing milestone progress.</li>
+              <li><strong>Leading Indicator 3:</strong> Plunder Deflection Rate <strong>&gt;40%</strong> choosing goal preservation over raiding.</li>
+              <li><strong>Guardrails:</strong> 0 SEBI advice violations; Notification mute rate &lt;1.5%; Zero artificial exit barriers.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>🛡️ Key Risks & Strategic Mitigations</h3>
+            <ul>
+              <li><strong>Risk 1: Exit Barrier Backlash:</strong> Behavioral mirror is strictly informative; 1-tap instant withdrawal button is always present.</li>
+              <li><strong>Risk 2: Unrealistic Milestone Projections:</strong> Conservative return bands (8–10% baseline) with primary emphasis on self-funded principal saved.</li>
+              <li><strong>Risk 3: Regulatory / SEBI Scrutiny:</strong> Hard deterministic regex filter blocks any fund-specific queries with audit logging.</li>
+              <li><strong>Risk 4: Goal Rigidity:</strong> 1-tap dynamic goal re-tagging allows users to rename or merge goals anytime.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card" style="background: rgba(24, 29, 36, 0.7);">
+          <p><strong>Executive Summary:</strong> By replacing cold, underwhelming statements with visible milestone progress, and anchoring generic funds into protected life goals, Groww transforms the 94.5% leaky bucket into a compounding wealth engine for first-time retail India.</p>
+        </div>
+      </div>
+      <div class="slide-footer">
+        <span>Strategic Metrics & Risk Governance</span>
+        <span>Slide 10 / 10 • Live Products: <a href="https://groww-anchor-mvp.vercel.app" target="_blank" style="color:var(--primary); font-weight:700;">Groww Anchor MVP</a> | <a href="https://groww-ai-discovery.vercel.app" target="_blank" style="color:var(--accent); font-weight:700;">AI Discovery Engine</a> | <a href="https://drive.google.com/drive/u/0/folders/1CXtF1JZZmIiB_M6IW4279FOLK4KprmNT" target="_blank">Golden_Set.txt</a></span>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    let currentSlide = 1;
+    const totalSlides = 10;
+
+    function showSlide(index) {
+      document.querySelectorAll('.slide').forEach((slide, i) => {
+        slide.classList.toggle('active', i + 1 === index);
+      });
+      document.getElementById('slideIndicator').textContent = `Slide ${index} of ${totalSlides}`;
+      currentSlide = index;
+    }
+
+    function nextSlide() {
+      if (currentSlide < totalSlides) {
+        showSlide(currentSlide + 1);
+      }
+    }
+
+    function prevSlide() {
+      if (currentSlide > 1) {
+        showSlide(currentSlide - 1);
+      }
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === ' ') {
+        nextSlide();
+      } else if (e.key === 'ArrowLeft') {
+        prevSlide();
+      }
+    });
+  </script>
+</body>
+</html>
