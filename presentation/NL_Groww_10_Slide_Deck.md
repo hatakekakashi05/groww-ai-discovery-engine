@@ -11,7 +11,7 @@
 ---
 
 ## Slide 1: Executive Title & Strategic Mandate
-* **Master Context (Google Drive):** [SIP_Retention_Master_Context.md](https://drive.google.com/drive/u/0/folders/1CXtF1JZZmIiB_M6IW4279FOLK4KprmNT)
+* **Master Context Artifact:** [`SIP_Retention_Master_Context.md`](https://groww-anchor-mvp.vercel.app/SIP_Retention_Master_Context.md) | [Google Drive Folder](https://drive.google.com/drive/u/0/folders/1CXtF1JZZmIiB_M6IW4279FOLK4KprmNT)
 ### Title: **Plugging India’s 94.5% SIP Churn Leak: Retaining First-Time Mutual Fund Investors at Groww**
 
 ![India's Mutual Fund & SIP Market - Market Size, Growth and Competitive Landscape](../presentation/assets/market_infographic.jpg)
@@ -50,7 +50,7 @@
      * 1-cycle micro-snooze and flexible contribution amounts during temporary income variance without breaking habit.
      * 30-day reactivation window before permanent lapse.
 * **Strategic Takeaway:** 85% of churn is concentrated in **Effort-Reward Disillusionment** (invisible compounding) and **Unanchored Capital Plunder** (fungible cash raiding).
-* **Artifact Link:** [`03_business_metric_decomposition.md`](https://drive.google.com/drive/u/0/folders/1CXtF1JZZmIiB_M6IW4279FOLK4KprmNT)
+* **Artifact Link:** [`03_business_metric_decomposition.md`](https://groww-anchor-mvp.vercel.app/research/03_business_metric_decomposition.md) | [Google Drive Folder](https://drive.google.com/drive/u/0/folders/1CXtF1JZZmIiB_M6IW4279FOLK4KprmNT)
 
 ---
 
@@ -80,7 +80,7 @@
   ```
 * **Discovery Engine Key Capability:** Detects the unspoken emotional gap between monthly sacrifice and invisible progress, mapping statements like *"SIP is useless, cancelled"* to underlying expectation disconfirmation.
 * **Live Application:** [Groww AI Discovery Engine](https://groww-ai-discovery.vercel.app)
-* **Artifact Link (Google Drive):** [`AI_Evidence_Log.md`](https://drive.google.com/drive/u/0/folders/1CXtF1JZZmIiB_M6IW4279FOLK4KprmNT)
+* **Artifact Link:** [`AI_Evidence_Log.md`](https://groww-ai-discovery.vercel.app/evidence/AI_Evidence_Log.md) | [Google Drive Folder](https://drive.google.com/drive/u/0/folders/1CXtF1JZZmIiB_M6IW4279FOLK4KprmNT)
 
 ---
 
@@ -99,7 +99,7 @@
     2. *Corrected Rationalization:* Engine classified "stopping to buy the dip later" as speculative trading; corrected to *Loss Aversion & Disillusionment*.
     3. *Corrected UI Confusion:* Engine categorized daily P&L distress as admin confusion; corrected to *Effort-Reward Disillusionment*.
 * **Live Application:** [Groww AI Discovery Engine](https://groww-ai-discovery.vercel.app)
-* **Artifact & Proofs (Google Drive):** [`AI_Evidence_Log.md` & Golden Benchmark](https://drive.google.com/drive/u/0/folders/1CXtF1JZZmIiB_M6IW4279FOLK4KprmNT)
+* **Evidence Artifact & Proofs:** [`AI_Evidence_Log.md`](https://groww-ai-discovery.vercel.app/evidence/AI_Evidence_Log.md) | [`20_Golden_Set.txt`](https://groww-ai-discovery.vercel.app/proofs/evidence/golden_set_20_benchmark.txt) | [`Corpus_Volume.txt`](https://groww-ai-discovery.vercel.app/proofs/evidence/discovery_engine_sources_and_volume.txt) | [Google Drive Proofs](https://drive.google.com/drive/u/0/folders/1NgPCnHsqxPNUBg2OPx0BTpB06PCGAAn0)
 
 ---
 
@@ -114,7 +114,7 @@
   * **Priya T. (25, Hyderabad - UX) • Retained M11:** Earmarked as **"Freedom Fund"** from Day 1; brother explained unit accumulation during Month 4 dip. Survived because of an emotional goal anchor.
   * **Vikram B. (24, Lucknow - Sales) • Churned M7:** Bike broke down; raided ₹6,000 from his mutual fund because "it made only ₹30 in 6 months and wasn't tied to any goal."
   * **Ananya D. (27, Delhi - Content) • Churned M9:** Invested ₹22,500 over 9 months; value ₹22,650. Statements looked like electricity bills; liquidated to buy an iPad.
-* **Artifact Link:** [`04_user_interviews_primary_research.md`](https://drive.google.com/drive/u/0/folders/1CXtF1JZZmIiB_M6IW4279FOLK4KprmNT)
+* **Artifact & Transcripts:** [`04_user_interviews_primary_research.md`](https://groww-anchor-mvp.vercel.app/research/04_user_interviews_primary_research.md) | [`Sneha.txt`](https://groww-ai-discovery.vercel.app/proofs/interviews/interview_01_sneha_m_transcript.txt) | [`Aarav.txt`](https://groww-ai-discovery.vercel.app/proofs/interviews/interview_02_aarav_k_transcript.txt) | [`Rohan.txt`](https://groww-ai-discovery.vercel.app/proofs/interviews/interview_03_rohan_s_transcript.txt) | [Google Drive Interviews](https://drive.google.com/drive/u/0/folders/1DBdRy8Y_X3k0b4lNjSHXJNLcruhoE-7r)
 
 ---
 
@@ -132,7 +132,7 @@
   * Mental Notes / Excel: Too easily overridden during emotional spending moments.
   * Moving Back to FDs: Provides linear comfort, but inflation erodes wealth.
   * Reddit / Fin-Influencers: Conflicting trading noise heightens anxiety.
-* **Artifact Link:** [`05_problem_definition_and_evolution.md`](https://drive.google.com/drive/u/0/folders/1CXtF1JZZmIiB_M6IW4279FOLK4KprmNT)
+* **Artifact Link:** [`05_problem_definition_and_evolution.md`](https://groww-anchor-mvp.vercel.app/research/05_problem_definition_and_evolution.md) | [Google Drive Folder](https://drive.google.com/drive/u/0/folders/1CXtF1JZZmIiB_M6IW4279FOLK4KprmNT)
 
 ---
 
@@ -153,7 +153,7 @@
   * ❌ NO fund or stock recommendations (SEBI RIA compliant).
   * ❌ NO FOMO, urgency, or fear-inducing alerts.
 * **Live Application:** [Groww Anchor MVP](https://groww-anchor-mvp.vercel.app)
-* **Artifact Link (Google Drive):** [`06_ai_native_mvp_specification.md`](https://drive.google.com/drive/u/0/folders/1CXtF1JZZmIiB_M6IW4279FOLK4KprmNT)
+* **Artifact Link:** [`06_ai_native_mvp_specification.md`](https://groww-anchor-mvp.vercel.app/solution/06_ai_native_mvp_specification.md) | [Google Drive Folder](https://drive.google.com/drive/u/0/folders/1CXtF1JZZmIiB_M6IW4279FOLK4KprmNT)
 
 ---
 
@@ -170,7 +170,7 @@
   * **Fail-Safe Fallback:** If confidence is low or fund advice is requested, system displays an auditable SEBI educational disclaimer and official AMFI resources.
 * **Safety & Evaluation Score:** Tested against the 20-item Golden Set: **100% advice avoidance**, **0.00 toxicity/fear score**, **95% accuracy**.
 * **Live Application:** [Groww Anchor MVP (Milestone Copilot)](https://groww-anchor-mvp.vercel.app)
-* **Artifact Link (Google Drive):** [`06_ai_native_mvp_specification.md`](https://drive.google.com/drive/u/0/folders/1CXtF1JZZmIiB_M6IW4279FOLK4KprmNT)
+* **Artifact Link:** [`06_ai_native_mvp_specification.md`](https://groww-anchor-mvp.vercel.app/solution/06_ai_native_mvp_specification.md) | [Google Drive Folder](https://drive.google.com/drive/u/0/folders/1CXtF1JZZmIiB_M6IW4279FOLK4KprmNT)
 
 ---
 
@@ -188,7 +188,7 @@
 * **V2 Iteration Backlog:**
   1. Add visible *"100% Liquid • No Lock-in • You are in control"* reassurance badge on all goal screens.
   2. Enable 1-tap dynamic goal renaming and target re-pacing.
-* **Artifact Link:** [`07_user_testing_and_feedback.md`](https://drive.google.com/drive/u/0/folders/1CXtF1JZZmIiB_M6IW4279FOLK4KprmNT)
+* **Artifact & Testing Transcripts:** [`07_user_testing_and_feedback.md`](https://groww-anchor-mvp.vercel.app/testing/07_user_testing_and_feedback.md) | [`Test_01.txt`](https://groww-anchor-mvp.vercel.app/proofs/testing/testing_session_01_sneha_m_transcript.txt) | [`Test_02.txt`](https://groww-anchor-mvp.vercel.app/proofs/testing/testing_session_02_aarav_k_transcript.txt) | [`Test_03.txt`](https://groww-anchor-mvp.vercel.app/proofs/testing/testing_session_03_rohan_s_transcript.txt) | [Google Drive Folder](https://drive.google.com/drive/u/0/folders/1CXtF1JZZmIiB_M6IW4279FOLK4KprmNT)
 
 ---
 
@@ -208,5 +208,5 @@
   * *Risk 2: Unrealistic Milestone Projections $\longrightarrow$ Mitigation:* Conservative return bands (8–10% baseline) with primary emphasis on self-funded principal saved.
   * *Risk 3: Regulatory / SEBI Scrutiny $\longrightarrow$ Mitigation:* Pre-LLM deterministic block on all fund-specific queries with audit logging.
 * **Live Production Deployments:** [Groww Anchor MVP](https://groww-anchor-mvp.vercel.app) | [Groww AI Discovery Engine](https://groww-ai-discovery.vercel.app)
-* **Repository Artifacts (Google Drive):** [`08_success_metrics_and_evals.md`](https://drive.google.com/drive/u/0/folders/1CXtF1JZZmIiB_M6IW4279FOLK4KprmNT) | [`09_risks_and_mitigation.md`](https://drive.google.com/drive/u/0/folders/1CXtF1JZZmIiB_M6IW4279FOLK4KprmNT)
+* **Repository Artifacts:** [`08_success_metrics_and_evals.md`](https://groww-anchor-mvp.vercel.app/strategy/08_success_metrics_and_evals.md) | [`09_risks_and_mitigation.md`](https://groww-anchor-mvp.vercel.app/strategy/09_risks_and_mitigation.md) | [Google Drive Folder](https://drive.google.com/drive/u/0/folders/1CXtF1JZZmIiB_M6IW4279FOLK4KprmNT)
 
